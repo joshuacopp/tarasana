@@ -6,54 +6,190 @@
   <title>Tarasana — Home</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@500;700&family=Kaivalya&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@400;600;700&family=Kaivalya&display=swap" rel="stylesheet">
 
   <style>
-    :root{ --brand-dark:#2a3846; }
-    body{ font-family:'Cinzel',serif; color:#1e2730; background:#fff; line-height:1.6; }
-    .navbar-brand{ font-weight:700; letter-spacing:.5px; }
-    .hero{ display:grid; place-items:center; padding:5rem 1rem 2rem; text-align:center; }
-    .hero img{ max-width:340px; width:65%; height:auto; }
-    .script-heading{ font-family:'Great Vibes',cursive; font-size:clamp(2.4rem,4vw + 1rem,5rem); text-align:center; margin:1.25rem 0 .5rem; }
-    .image-band img{ width:100%; height:auto; display:block; object-fit:cover; }
-    .content-wrap{ max-width:1100px; margin:0 auto; padding:0 1rem; }
-    footer{ padding:2rem 1rem 3rem; text-align:center; font-size:.95rem; opacity:.8; }
+    :root{
+      --ink:#1f2a33;
+      --muted:rgba(31,42,51,.78);
+      --hair:rgba(0,0,0,.08);
+      --card:#ffffff;
+      --bg:#fbfbfc;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --radius:18px;
+    }
 
-    /* Scroll fade base (JS will adjust opacity live) */
-    .scroll-fade{ opacity:.35; transition:opacity .25s linear; will-change:opacity; }
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+    }
 
-    /* Equal vertical heights for paired images */
-    .equal-vh{ height:360px; width:100%; object-fit:cover; border-radius:.5rem; }
+    /* Brand typography */
+    .brand, h1,h2,h3,h4,h5,.navbar-brand{
+      font-family:'Cinzel', serif;
+      letter-spacing:.01em;
+    }
+    .script-heading{
+      font-family:'Great Vibes',cursive;
+      font-size:clamp(2.4rem,4vw + 1rem,5rem);
+      text-align:center;
+      margin:1.5rem 0 .75rem;
+      color: rgba(31,42,51,.92);
+    }
+    .kicker{
+      font-family:'Poppins',sans-serif;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      text-align:center;
+      font-weight:700;
+      color: rgba(31,42,51,.86);
+    }
+    .kaivalya{
+      font-family:'Kaivalya','Cinzel',serif;
+      letter-spacing:.02em;
+      text-transform:none;
+    }
+
+    /* Layout */
+    .content-wrap{
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    section{ padding: 3.25rem 0; }
+    @media (max-width: 576px){
+      body{ font-size: 17px; }
+      section{ padding: 2.5rem 0; }
+    }
+
+    /* Readable copy */
+    p{ color: var(--muted); }
+    .copy p, .copy li{
+      max-width: 68ch;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .copy p{ margin-bottom: 1rem; }
+    .copy .lead{
+      color: rgba(31,42,51,.88);
+      font-weight: 500;
+    }
+
+    /* Cards + dividers */
+    .card-soft{
+      background: var(--card);
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .copy-card{
+      padding: 1.75rem;
+    }
+    @media (min-width: 992px){
+      .copy-card{ padding: 2rem 2.25rem; }
+    }
+    hr{ opacity:.12; }
+
+    /* Images */
+    .img-edge{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: var(--radius);
+      border: 1px solid var(--hair);
+      box-shadow: var(--shadow);
+      object-fit:cover;
+    }
+    .equal-vh{
+      height:360px;
+      width:100%;
+      object-fit:cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--hair);
+      box-shadow: var(--shadow);
+    }
     @media(min-width:992px){ .equal-vh{ height:420px; } }
 
-    .form-floating>label{ color:#6c757d; }
-
-    /* Modern typographic elements */
-    .kicker { font-family:'Poppins',sans-serif; letter-spacing:.12em; text-transform:uppercase; text-align:center; font-weight:700; }
-    .kicker.yoga { font-size:clamp(1.4rem, 1.2vw + 1rem, 2rem); margin:2rem 0 .5rem; }
-    .subhead { font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(1.3rem, .8vw + 1rem, 1.8rem); margin:2rem 0 .75rem; text-align:center; }
-    .img-wrap { max-width:1100px; margin:0 auto; padding:0 1rem; }
-    .img-edge { width:100%; height:auto; display:block; border-radius:.5rem; box-shadow:0 8px 24px rgba(0,0,0,.08); }
-
-    /* Kaivalya styling for Yoga section */
-    .kaivalya { font-family: 'Kaivalya', 'Cinzel', serif; letter-spacing: .02em; text-transform: none; }
-
-    /* Calendly embed polish */
-    .calendly-wrap {
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: .75rem;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,.06);
-      background: #fff;
+    /* Hero */
+    .navbar{ background:#fff; }
+    .hero{
+      padding: 4.5rem 0 2rem;
+      text-align:center;
+      background:#fff;
+      border-bottom: 1px solid var(--hair);
     }
+    .hero-logo{
+      max-width: 340px;
+      width: 62%;
+      height:auto;
+      margin: 0 auto;
+      display:block;
+    }
+    .hero-tagline{
+      max-width: 60ch;
+      margin: 1.25rem auto 0;
+      color: rgba(31,42,51,.82);
+      font-weight: 500;
+    }
+
+    /* Scroll fade (subtle) */
+    .scroll-fade{ opacity:.7; transition:opacity .25s linear; will-change:opacity; }
+
+    /* Lists that don’t feel “bulleted wall” */
+    .feature-list{
+      list-style:none;
+      padding-left:0;
+      margin: 1rem auto 0;
+      max-width: 68ch;
+    }
+    .feature-list li{
+      display:flex;
+      gap:.65rem;
+      align-items:flex-start;
+      margin: .55rem 0;
+      color: var(--muted);
+    }
+    .dot{
+      margin-top:.3rem;
+      width:.55rem;
+      height:.55rem;
+      border-radius:999px;
+      background: rgba(31,42,51,.35);
+      flex: 0 0 auto;
+    }
+
+    /* Schedule embed */
+    .embed-shell{
+      background:#fff;
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+
+    /* Footer */
+    footer{
+      padding: 2.5rem 0 3rem;
+      text-align:center;
+      color: rgba(31,42,51,.70);
+    }
+
+    /* Form */
+    .form-floating>label{ color:#6c757d; }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-white sticky-top border-bottom">
+  <nav class="navbar navbar-expand-md sticky-top border-bottom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tarasana</a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand brand" href="#">Tarasana</a>
+
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -63,32 +199,22 @@
           <li class="nav-item"><a class="nav-link" href="#who">Who We Are</a></li>
           <li class="nav-item"><a class="nav-link" href="#what">What We Do</a></li>
           <li class="nav-item"><a class="nav-link" href="#why">Why We Do It</a></li>
-          <li class="nav-item"><a class="nav-link" href="#schedule">Class Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero scroll-fade">
-    <!-- Logo placeholder -->
-    <img
-      src="assets/img/logo.png"
-      alt="Tarasana logo"
-      loading="eager"
-    />
-
-    <div class="content-wrap mt-3">
-      <p class="lead mb-0">
-        <!-- Optional hero blurb -->
+  <header class="hero">
+    <div class="content-wrap scroll-fade">
+      <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager" />
+      <p class="hero-tagline">
         Gentle, accessible movement — for every body, every age.
       </p>
-    </div>
 
-    <!-- Two hero images (placeholders) -->
-    <div class="content-wrap mt-4">
-      <div class="row g-3">
+      <div class="row g-3 mt-4 text-start">
         <div class="col-12 col-md-6">
           <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1" loading="lazy">
         </div>
@@ -100,205 +226,289 @@
   </header>
 
   <main>
-    <div class="content-wrap">
-      <h1 class="script-heading scroll-fade">Live your life</h1>
-    </div>
+    <!-- Script headings + bands -->
+    <section class="pt-4 pb-0">
+      <div class="content-wrap">
+        <h1 class="script-heading scroll-fade">Live your life</h1>
+      </div>
+    </section>
 
-    <!-- IMAGE BAND 1 -->
-    <section class="image-band scroll-fade">
-      <div class="img-wrap pb-4">
+    <section class="pt-3">
+      <div class="content-wrap scroll-fade">
         <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
       </div>
     </section>
 
-    <div class="content-wrap">
-      <h2 class="script-heading scroll-fade">On Your Terms</h2>
-    </div>
+    <section class="pt-2 pb-0">
+      <div class="content-wrap">
+        <h2 class="script-heading scroll-fade">On Your Terms</h2>
+      </div>
+    </section>
 
-    <!-- IMAGE BAND 2 -->
-    <section class="image-band scroll-fade">
-      <div class="img-wrap pb-4">
+    <section class="pt-3">
+      <div class="content-wrap scroll-fade">
         <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
       </div>
     </section>
 
-    <!-- YOGA headline -->
-    <div class="content-wrap">
-      <div class="kicker yoga kaivalya scroll-fade">YOGA</div>
-    </div>
-
-    <!-- Yoga intro cards -->
-    <section class="py-5 bg-light scroll-fade">
+    <!-- YOGA INTRO -->
+    <section class="pb-0">
       <div class="content-wrap">
-        <p class="lead text-center mb-4">
-          Our gentle and adaptive practice is designed to suit any fitness level and any age
+        <div class="kicker kaivalya scroll-fade">YOGA</div>
+        <p class="lead text-center copy mt-3 scroll-fade" style="max-width:68ch;">
+          Gentle and adaptive practice designed to suit any fitness level and any age.
         </p>
+      </div>
+    </section>
 
+    <!-- Yoga offerings in cards -->
+    <section class="pt-4">
+      <div class="content-wrap">
         <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow-sm border-0">
-              <img class="equal-vh w-100" src="assets/img/yoga_card_1.jpg" alt="Yoga card image 1" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Chair Yoga</h5>
-                <p class="card-text">
-                  Accessible movement with options for every body — build strength, mobility, and confidence.
-                </p>
+          <div class="col-12 col-lg-6 scroll-fade">
+            <div class="card-soft h-100">
+              <img class="equal-vh w-100" src="assets/img/yoga_card_1.jpg" alt="Chair yoga" loading="lazy">
+              <div class="p-4 copy">
+                <h3 class="h5 brand mb-2">Chair Yoga</h3>
+                <p class="mb-3">Accessible movement with options for every body — build strength, mobility, and confidence.</p>
+                <ul class="feature-list">
+                  <li><span class="dot"></span><span>Supportive, joint-friendly sequences</span></li>
+                  <li><span class="dot"></span><span>Great for beginners and returners</span></li>
+                  <li><span class="dot"></span><span>Focus on comfort and consistency</span></li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow-sm border-0">
-              <img class="equal-vh w-100" src="assets/img/yoga_card_2.jpg" alt="Yoga card image 2" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Gentle Flow</h5>
-                <p class="card-text">
-                  A calming practice focused on breath, balance, and feeling better in your body.
-                </p>
+          <div class="col-12 col-lg-6 scroll-fade">
+            <div class="card-soft h-100">
+              <img class="equal-vh w-100" src="assets/img/yoga_card_2.jpg" alt="Gentle flow" loading="lazy">
+              <div class="p-4 copy">
+                <h3 class="h5 brand mb-2">Gentle Flow</h3>
+                <p class="mb-3">A calming practice focused on breath, balance, and feeling better in your body.</p>
+                <ul class="feature-list">
+                  <li><span class="dot"></span><span>Breath-led movement</span></li>
+                  <li><span class="dot"></span><span>Balance + core stability</span></li>
+                  <li><span class="dot"></span><span>Reset your nervous system</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Yoga subsections (with image placeholders) -->
-    <div class="content-wrap">
-      <div class="subhead kaivalya scroll-fade">for mobility</div>
-    </div>
-    <section class="image-band scroll-fade">
-      <div class="img-wrap pb-4">
-        <img class="img-edge" src="assets/img/mobility.jpg" alt="Mobility image" loading="lazy">
-      </div>
-    </section>
-
-    <div class="content-wrap">
-      <div class="subhead kaivalya scroll-fade">for pain relief</div>
-    </div>
-    <section class="image-band scroll-fade">
-      <div class="img-wrap pb-4">
-        <img class="img-edge" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
-      </div>
-    </section>
-
-    <div class="content-wrap">
-      <div class="subhead kaivalya scroll-fade">For Balance - physical, mental, and emotional</div>
-    </div>
-    <section class="image-band scroll-fade">
-      <div class="img-wrap pb-4">
-        <img class="img-edge" src="assets/img/balance.jpg" alt="Balance image" loading="lazy">
-      </div>
-    </section>
-
-    <!-- Mission -->
-    <section id="mission" class="content-wrap py-5 scroll-fade">
-      <h3 class="mb-3">Our Mission</h3>
-      <p>Short placeholder text about the mission. Replace with your copy when ready.</p>
-    </section>
-
-    <!-- Who we are -->
-    <section id="who" class="content-wrap pb-5 scroll-fade">
-      <h3 class="mb-3">Who We Are</h3>
-      <p>We are a Tarasana! We are a collective of practitioners in different fields of wellness who have come together to create an accessible path to health and happiness.</p>
-      <hr class="my-4"/>
-      <h4 class="mb-3">Meet Tara</h4>
-      <p>Tara is a certified yoga instructor, life coach (soon-ish), and certified bad booty bitch. Tara’s goal is to help guide you on your journey towards better health, greater mobility, decreased pain, inner peace, and self love.</p>
-
-      <div class="row g-3">
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Meet Tara photo 1" loading="lazy">
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Meet Tara photo 2" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- What + Why -->
-    <section id="what" class="content-wrap pb-5 scroll-fade">
-      <h3 class="mb-3">What We Do</h3>
-      <p>We at Tarasana eat the elephant one bite at a time. We know there’s no magic bullet. No easy answer. No quick fix to the big challenges. But what’s the rush anyways? What we do at Tarasana is stand side by side with you to face off against life’s big challenges, break them down to manageable goals, and work to them with you. Utilizing a multimodal approach of mobility through flexibility, nutrition, meditation, structured breathing exercises, and other stuff, we help you to prepare yourself to be better enabled to live your life to the fullest, as your best, and most joyful self.</p>
-    </section>
-
-    <section id="why" class="content-wrap pb-5 scroll-fade">
-      <h3 class="mb-3">Why We Do It</h3>
-      <p>As a child we know we’ll live forever, and nothing could ever slow us down. As we begin to grow up we start to witness and realize that those around us — our parents, our grandparents, our aunts and uncles — may not be as invincible as we are. As we mature we learn the truth about the relationship between how we, and those around us, have treated our bodies and our minds, and how that has handicapped us physically, mentally, and spiritually. These revelations of maturity shaped not only our personal paths, but also our life’s work, as we focus our energies, talents, efforts, and experience on helping live a better today to shape a brighter tomorrow.</p>
-    </section>
-
-    <!-- Schedule (Calendly booking) -->
-    <section id="schedule" class="content-wrap pb-5 scroll-fade">
-      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-        <h3 class="mb-0">Class Schedule</h3>
-        <a class="btn btn-outline-primary"
-           href="https://calendly.com/joshua-copp/chair-yoga"
-           target="_blank" rel="noreferrer">
-          Open booking in a new tab
-        </a>
-      </div>
-
-      <div class="calendly-wrap">
-        <div
-          class="calendly-inline-widget"
-          data-url="https://calendly.com/joshua-copp/chair-yoga"
-          style="min-width:320px;height:900px;">
-        </div>
-      </div>
-
-      <p class="mt-3 small text-muted">
-        Pick a time that works for you — booking, confirmations, and reminders are handled automatically.
-      </p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="content-wrap pb-5 scroll-fade">
-      <h3 class="mb-3">Contact Us</h3>
-
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-6 form-floating">
-          <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-          <label for="name">Name</label>
-          <div class="invalid-feedback">Please enter your name.</div>
-        </div>
-
-        <div class="col-md-6 form-floating">
-          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-          <label for="email">Email</label>
-          <div class="invalid-feedback">A valid email is required.</div>
-        </div>
-
-        <div class="col-md-6 form-floating">
-          <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555">
-          <label for="phone">Phone</label>
-        </div>
-
-        <div class="col-md-6">
-          <label class="form-label d-block">Contact Preference</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="pref" id="prefEmail" value="email" checked>
-            <label class="form-check-label" for="prefEmail">Email</label>
+        <!-- Three “benefits” as short blocks -->
+        <div class="row g-4 mt-4">
+          <div class="col-12 col-lg-4 scroll-fade">
+            <div class="card-soft copy-card copy h-100">
+              <h3 class="h6 brand mb-2 kaivalya">For mobility</h3>
+              <p class="mb-0">Improve range of motion and everyday movement with gentle, repeatable patterns.</p>
+            </div>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="pref" id="prefPhone" value="phone">
-            <label class="form-check-label" for="prefPhone">Phone</label>
+          <div class="col-12 col-lg-4 scroll-fade">
+            <div class="card-soft copy-card copy h-100">
+              <h3 class="h6 brand mb-2 kaivalya">For pain relief</h3>
+              <p class="mb-0">Reduce stiffness and tension by pairing breath, posture, and supportive alignment.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 scroll-fade">
+            <div class="card-soft copy-card copy h-100">
+              <h3 class="h6 brand mb-2 kaivalya">For balance</h3>
+              <p class="mb-0">Build physical, mental, and emotional steadiness — one class at a time.</p>
+            </div>
           </div>
         </div>
 
-        <div class="col-12 form-floating">
-          <textarea class="form-control" placeholder="Your message" id="message" style="height: 140px" required></textarea>
-          <label for="message">Message</label>
-          <div class="invalid-feedback">Please add a short message.</div>
+        <!-- Optional images under the benefit blocks (kept, but less dominant) -->
+        <div class="row g-3 mt-4">
+          <div class="col-12 col-md-4 scroll-fade">
+            <img class="img-edge" src="assets/img/mobility.jpg" alt="Mobility image" loading="lazy">
+          </div>
+          <div class="col-12 col-md-4 scroll-fade">
+            <img class="img-edge" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
+          </div>
+          <div class="col-12 col-md-4 scroll-fade">
+            <img class="img-edge" src="assets/img/balance.jpg" alt="Balance image" loading="lazy">
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Send</button>
+    <!-- MISSION -->
+    <section id="mission">
+      <div class="content-wrap scroll-fade">
+        <div class="card-soft copy-card copy">
+          <h3 class="mb-3">Our Mission</h3>
+          <p class="lead">
+            Make wellness feel doable — not intimidating.
+          </p>
+          <ul class="feature-list">
+            <li><span class="dot"></span><span>Accessible movement for real life.</span></li>
+            <li><span class="dot"></span><span>Small steps that add up to lasting change.</span></li>
+            <li><span class="dot"></span><span>Support that meets you where you are.</span></li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div class="col-12">
-          <p class="small text-muted mb-0">
-            Note: this form is still “demo mode” until you wire it to a backend (Cloudflare Pages Functions, Formspree, etc.).
+    <!-- WHO -->
+    <section id="who">
+      <div class="content-wrap">
+        <div class="card-soft copy-card copy scroll-fade">
+          <h3 class="mb-3">Who We Are</h3>
+          <p class="lead">We are Tarasana — a collective of practitioners in different fields of wellness creating an accessible path to health and happiness.</p>
+
+          <hr class="my-4"/>
+
+          <h4 class="h5 brand mb-2">Meet Tara</h4>
+          <p>
+            Tara is a certified yoga instructor, life coach (soon-ish), and certified bad booty bitch.
+            Tara’s goal is to help guide you toward better health, greater mobility, decreased pain, inner peace, and self love.
           </p>
         </div>
-      </form>
+
+        <div class="row g-3 mt-4">
+          <div class="col-12 col-md-6 scroll-fade">
+            <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Meet Tara photo 1" loading="lazy">
+          </div>
+          <div class="col-12 col-md-6 scroll-fade">
+            <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Meet Tara photo 2" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT -->
+    <section id="what">
+      <div class="content-wrap scroll-fade">
+        <div class="card-soft copy-card copy">
+          <h3 class="mb-3">What We Do</h3>
+
+          <p class="lead">
+            We eat the elephant one bite at a time. No magic bullet. No easy answer. No quick fix.
+          </p>
+
+          <ul class="feature-list">
+            <li><span class="dot"></span><span>Stand side by side with you to face life’s big challenges.</span></li>
+            <li><span class="dot"></span><span>Break them down into manageable goals.</span></li>
+            <li><span class="dot"></span><span>Work toward them with a multimodal approach — mobility, nutrition, meditation, breathwork, and more.</span></li>
+          </ul>
+
+          <p class="mb-0">
+            It’s not about rushing. It’s about building a better today that leads to a brighter tomorrow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why">
+      <div class="content-wrap scroll-fade">
+        <div class="card-soft copy-card copy">
+          <h3 class="mb-3">Why We Do It</h3>
+
+          <p class="lead">
+            Growing up teaches us that our bodies and minds aren’t invincible — and the way we care for them matters.
+          </p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-12 col-lg-6">
+              <ul class="feature-list">
+                <li><span class="dot"></span><span>We witness how time and stress change the people we love.</span></li>
+                <li><span class="dot"></span><span>We learn the real cost of ignoring pain, mobility, and mental wellbeing.</span></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-6">
+              <ul class="feature-list">
+                <li><span class="dot"></span><span>We realize small daily choices shape our future.</span></li>
+                <li><span class="dot"></span><span>We choose to turn that lesson into service — helping others live better.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-2 mb-0">
+            These revelations shaped not only our personal paths, but our life’s work — focusing our energy, talents, and experience on helping you live your life fully.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE (Acuity) -->
+    <section id="schedule">
+      <div class="content-wrap scroll-fade">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+          <h3 class="mb-0">Schedule & Booking</h3>
+          <a class="btn btn-outline-primary"
+             href="https://app.acuityscheduling.com/schedule.php?owner=37818194"
+             target="_blank" rel="noreferrer">
+            Open booking in a new tab
+          </a>
+        </div>
+
+        <div class="embed-shell">
+          <iframe
+            src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
+            style="width:100%;height:950px;border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Acuity Scheduling">
+          </iframe>
+        </div>
+
+        <p class="small mt-3 mb-0" style="max-width:68ch;">
+          Choose a time that works for you. If the embed ever feels tight on mobile, the “Open booking” button above is the best experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="content-wrap scroll-fade">
+        <div class="card-soft copy-card">
+          <h3 class="mb-3">Contact Us</h3>
+
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+              <label for="name">Name</label>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="col-md-6 form-floating">
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              <label for="email">Email</label>
+              <div class="invalid-feedback">A valid email is required.</div>
+            </div>
+
+            <div class="col-md-6 form-floating">
+              <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555">
+              <label for="phone">Phone</label>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label d-block">Contact Preference</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="pref" id="prefEmail" value="email" checked>
+                <label class="form-check-label" for="prefEmail">Email</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="pref" id="prefPhone" value="phone">
+                <label class="form-check-label" for="prefPhone">Phone</label>
+              </div>
+            </div>
+
+            <div class="col-12 form-floating">
+              <textarea class="form-control" placeholder="Your message" id="message" style="height: 140px" required></textarea>
+              <label for="message">Message</label>
+              <div class="invalid-feedback">Please add a short message.</div>
+            </div>
+
+            <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+              <button class="btn btn-primary" type="submit">Send</button>
+              <span class="small text-muted">Demo mode until wired to a backend.</span>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -309,9 +519,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Calendly embed script -->
-  <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -331,19 +538,19 @@
       });
     });
 
-    // Standardized distance-based fade across the full layout
+    // Subtle distance-based fade (keeps things from feeling “flat”, but not distracting)
     (function() {
       const items = Array.from(document.querySelectorAll('.scroll-fade'));
       function update() {
         const vh = window.innerHeight;
-        const center = vh * 0.55; // slightly below center so items sharpen sooner
+        const center = vh * 0.55;
         items.forEach(el => {
           const r = el.getBoundingClientRect();
           const mid = r.top + r.height/2;
           const dist = Math.abs(mid - center);
           const maxDist = vh;
-          let ratio = 1 - Math.min(dist / maxDist, 1);
-          const opacity = 0.6 + 0.4 * ratio; // never below .6 anywhere on page
+          const ratio = 1 - Math.min(dist / maxDist, 1);
+          const opacity = 0.78 + 0.22 * ratio; // stays readable everywhere
           el.style.opacity = opacity.toFixed(2);
         });
       }
