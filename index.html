@@ -1,718 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tarasana — Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tarasana — Home</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@400;600;700&family=Kaivalya&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@400;600;700&family=Kaivalya&display=swap"
+        rel="stylesheet">
 
-  <style>
-    :root{
-      --ink:#1f2a33;
-      --muted:rgba(31,42,51,.78);
-      --hair:rgba(0,0,0,.08);
-      --card:#ffffff;
-      --bg:#fbfbfc;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
-      --radius:18px;
-    }
+    <style>
+        :root {
+            --ink: #1f2a33;
+            --muted: rgba(31, 42, 51, .78);
+            --hair: rgba(0, 0, 0, .08);
+            --card: #ffffff;
+            --bg: #fbfbfc;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .06);
+            --radius: 18px;
+        }
 
-    body{
-      background:var(--bg);
-      color:var(--ink);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.75;
-      text-rendering: optimizeLegibility;
-    }
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.75;
+            text-rendering: optimizeLegibility;
+        }
 
-    /* Brand typography */
-    .brand, h1,h2,h3,h4,h5,.navbar-brand{
-      font-family:'Cinzel', serif;
-      letter-spacing:.01em;
-    }
-    .script-heading{
-      font-family:'Great Vibes',cursive;
-      font-size:clamp(2.4rem,4vw + 1rem,5rem);
-      text-align:center;
-      margin:1.5rem 0 .75rem;
-      color: rgba(31,42,51,.92);
-    }
-    .kicker{
-      font-family:'Poppins',sans-serif;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      text-align:center;
-      font-weight:700;
-      color: rgba(31,42,51,.86);
-    }
-    .kaivalya{
-      font-family:'Kaivalya','Cinzel',serif;
-      letter-spacing:.02em;
-      text-transform:none;
-    }
+        /* Brand typography */
+        .brand,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Cinzel', serif;
+            letter-spacing: .01em;
+        }
 
-    /* Layout */
-    .content-wrap{
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    section{ padding: 3.25rem 0; }
-    @media (max-width: 576px){
-      body{ font-size: 17px; }
-      section{ padding: 2.5rem 0; }
-    }
+        .script-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.4rem, 4vw + 1rem, 5rem);
+            text-align: center;
+            margin: 1.5rem 0 .75rem;
+            color: rgba(31, 42, 51, .92);
+        }
 
-    /* Readable copy */
-    p{ color: var(--muted); }
-    .copy p, .copy li, .copy blockquote{
-      max-width: 68ch;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .copy p{ margin-bottom: 1rem; }
-    .copy .lead{
-      color: rgba(31,42,51,.88);
-      font-weight: 500;
-    }
+        .kicker {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            color: rgba(31, 42, 51, .86);
+        }
 
-    /* Cards + dividers */
-    .card-soft{
-      background: var(--card);
-      border: 1px solid var(--hair);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .copy-card{
-      padding: 1.75rem;
-    }
-    @media (min-width: 992px){
-      .copy-card{ padding: 2rem 2.25rem; }
-    }
-    hr{ opacity:.12; }
+        .kaivalya {
+            font-family: 'Kaivalya', 'Cinzel', serif;
+            letter-spacing: .02em;
+            text-transform: none;
+        }
 
-    /* Quote */
-    .quote{
-      border-left: 4px solid rgba(31,42,51,.18);
-      padding-left: 1rem;
-      margin: 1.25rem auto 0;
-      color: rgba(31,42,51,.82);
-      font-style: italic;
-    }
-    .quote cite{
-      display:block;
-      margin-top:.5rem;
-      font-style: normal;
-      color: rgba(31,42,51,.65);
-      font-size:.95rem;
-    }
+        /* Layout */
+        .content-wrap {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-    /* Images */
-    .img-edge{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius: var(--radius);
-      border: 1px solid var(--hair);
-      box-shadow: var(--shadow);
-      object-fit:cover;
-    }
-    .equal-vh{
-      height:360px;
-      width:100%;
-      object-fit:cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--hair);
-      box-shadow: var(--shadow);
-    }
-    @media(min-width:992px){ .equal-vh{ height:420px; } }
+        section {
+            padding: 3.25rem 0;
+        }
 
-    /* Hero */
-    .navbar{ background:#fff; }
-    .hero{
-      padding: 4.5rem 0 2rem;
-      text-align:center;
-      background:#fff;
-      border-bottom: 1px solid var(--hair);
-    }
-    .hero-logo{
-      max-width: 340px;
-      width: 62%;
-      height:auto;
-      margin: 0 auto;
-      display:block;
-    }
-    .hero-tagline{
-      max-width: 62ch;
-      margin: 1.25rem auto 0;
-      color: rgba(31,42,51,.82);
-      font-weight: 500;
-    }
+        @media (max-width: 576px) {
+            body {
+                font-size: 17px;
+            }
 
-    /* Scroll fade (subtle) */
-    .scroll-fade{ opacity:.7; transition:opacity .25s linear; will-change:opacity; }
+            section {
+                padding: 2.5rem 0;
+            }
+        }
 
-    /* Lists that don’t feel “bulleted wall” */
-    .feature-list{
-      list-style:none;
-      padding-left:0;
-      margin: 1rem auto 0;
-      max-width: 68ch;
-    }
-    .feature-list li{
-      display:flex;
-      gap:.65rem;
-      align-items:flex-start;
-      margin: .55rem 0;
-      color: var(--muted);
-    }
-    .dot{
-      margin-top:.3rem;
-      width:.55rem;
-      height:.55rem;
-      border-radius:999px;
-      background: rgba(31,42,51,.35);
-      flex: 0 0 auto;
-    }
+        /* Readable copy */
+        p {
+            color: var(--muted);
+        }
 
-    /* Schedule embed */
-    .embed-shell{
-      background:#fff;
-      border: 1px solid var(--hair);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
-    }
+        .copy p,
+        .copy li,
+        .copy blockquote {
+            max-width: 68ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* Footer */
-    footer{
-      padding: 2.5rem 0 3rem;
-      text-align:center;
-      color: rgba(31,42,51,.70);
-    }
+        .copy p {
+            margin-bottom: 1rem;
+        }
 
-    /* Form */
-    .form-floating>label{ color:#6c757d; }
+        .copy .lead {
+            color: rgba(31, 42, 51, .88);
+            font-weight: 500;
+        }
 
-    /* Small “pill” label */
-    .pill{
-      display:inline-block;
-      font-family:'Poppins',sans-serif;
-      font-size:.78rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      padding:.35rem .6rem;
-      border-radius:999px;
-      border:1px solid var(--hair);
-      background:#fff;
-      color: rgba(31,42,51,.72);
-    }
+        /* Cards + dividers */
+        .card-soft {
+            background: var(--card);
+            border: 1px solid var(--hair);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
 
-    /* Favicon (optional once you add it) */
-    /* <link rel="icon" href="/favicon.ico" type="image/x-icon"> */
-  </style>
+        .copy-card {
+            padding: 1.75rem;
+        }
 
-  <!-- Favicon (add favicon.ico to repo root, then uncomment) -->
-  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+        @media (min-width: 992px) {
+            .copy-card {
+                padding: 2rem 2.25rem;
+            }
+        }
+
+        hr {
+            opacity: .12;
+        }
+
+        /* Quote */
+        .quote {
+            border-left: 4px solid rgba(31, 42, 51, .18);
+            padding-left: 1rem;
+            margin: 1.25rem auto 0;
+            color: rgba(31, 42, 51, .82);
+            font-style: italic;
+        }
+
+        .quote cite {
+            display: block;
+            margin-top: .5rem;
+            font-style: normal;
+            color: rgba(31, 42, 51, .65);
+            font-size: .95rem;
+        }
+
+        /* Images */
+        .img-edge {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius);
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
+
+        .equal-vh {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+        }
+
+        @media(min-width:992px) {
+            .equal-vh {
+                height: 420px;
+            }
+        }
+
+        /* Make the 3 benefit images uniform */
+        .benefit-img {
+            width: 100%;
+            height: 220px;
+            /* adjust to taste */
+            object-fit: cover;
+            /* crops to fill */
+            border-radius: var(--radius);
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+            display: block;
+        }
+
+        @media (min-width: 992px) {
+            .benefit-img {
+                height: 190px;
+            }
+        }
+
+
+        /* Hero */
+        .navbar {
+            background: #fff;
+        }
+
+        .hero {
+            padding: 4.5rem 0 2rem;
+            text-align: center;
+            background: #fff;
+            border-bottom: 1px solid var(--hair);
+        }
+
+        .hero-logo {
+            max-width: 340px;
+            width: 62%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .hero-tagline {
+            max-width: 62ch;
+            margin: 1.25rem auto 0;
+            color: rgba(31, 42, 51, .82);
+            font-weight: 500;
+        }
+
+        /* Scroll fade (subtle) */
+        .scroll-fade {
+            opacity: .7;
+            transition: opacity .25s linear;
+            will-change: opacity;
+        }
+
+        /* Lists that don’t feel “bulleted wall” */
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem auto 0;
+            max-width: 68ch;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: .65rem;
+            align-items: flex-start;
+            margin: .55rem 0;
+            color: var(--muted);
+        }
+
+        .dot {
+            margin-top: .3rem;
+            width: .55rem;
+            height: .55rem;
+            border-radius: 999px;
+            background: rgba(31, 42, 51, .35);
+            flex: 0 0 auto;
+        }
+
+        /* Schedule embed */
+        .embed-shell {
+            background: #fff;
+            border: 1px solid var(--hair);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2.5rem 0 3rem;
+            text-align: center;
+            color: rgba(31, 42, 51, .70);
+        }
+
+        /* Form */
+        .form-floating>label {
+            color: #6c757d;
+        }
+
+        /* Small “pill” label */
+        .pill {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: .35rem .6rem;
+            border-radius: 999px;
+            border: 1px solid var(--hair);
+            background: #fff;
+            color: rgba(31, 42, 51, .72);
+        }
+
+        /* Favicon (optional once you add it) */
+        /* <link rel="icon" href="/favicon.ico" type="image/x-icon"> */
+    </style>
+
+    <!-- Favicon (add favicon.ico to repo root, then uncomment) -->
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md sticky-top border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand brand" href="#">Tarasana</a>
+    <nav class="navbar navbar-expand-md sticky-top border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand brand" href="#">Tarasana</a>
 
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav mb-2 mb-md-0">
-          <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
-          <li class="nav-item"><a class="nav-link" href="#who">Meet Tara</a></li>
-          <li class="nav-item"><a class="nav-link" href="#vibro">Vibroacoustic</a></li>
-          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="content-wrap scroll-fade">
-      <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager" />
-      <p class="hero-tagline">
-        Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
-      </p>
-
-      <div class="row g-3 mt-4 text-start">
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1" loading="lazy">
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Yoga / wellness image 2" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Script headings + bands -->
-    <section class="pt-4 pb-0">
-      <div class="content-wrap">
-        <h1 class="script-heading scroll-fade">Live your life</h1>
-      </div>
-    </section>
-
-    <section class="pt-3">
-      <div class="content-wrap scroll-fade">
-        <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
-      </div>
-    </section>
-
-    <section class="pt-2 pb-0">
-      <div class="content-wrap">
-        <h2 class="script-heading scroll-fade">On Your Terms</h2>
-      </div>
-    </section>
-
-    <section class="pt-3">
-      <div class="content-wrap scroll-fade">
-        <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
-      </div>
-    </section>
-
-    <!-- YOGA INTRO -->
-    <section class="pb-0">
-      <div class="content-wrap">
-        <div class="kicker kaivalya scroll-fade">YOGA</div>
-        <p class="lead text-center copy mt-3 scroll-fade" style="max-width:68ch;">
-          Gentle and accessible yoga designed to meet every body where they’re at.
-        </p>
-      </div>
-    </section>
-
-    <!-- Yoga offerings -->
-    <section class="pt-4">
-      <div class="content-wrap">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-lg-6 scroll-fade">
-            <div class="card-soft h-100">
-              <img class="equal-vh w-100" src="assets/img/yoga_card_1.jpg" alt="Chair yoga" loading="lazy">
-              <div class="p-4 copy">
-                <h3 class="h5 brand mb-2">Chair Yoga</h3>
-                <p class="mb-3">Supportive movement with options for every body — build strength, mobility, and confidence.</p>
-                <ul class="feature-list">
-                  <li><span class="dot"></span><span>Gentle, joint-friendly sequences</span></li>
-                  <li><span class="dot"></span><span>Breath-led pacing and mindful cues</span></li>
-                  <li><span class="dot"></span><span>Comfort, consistency, and calm</span></li>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#who">Meet Tara</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vibro">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-              </div>
             </div>
-          </div>
-
-          <div class="col-12 col-lg-6 scroll-fade">
-            <div class="card-soft h-100">
-              <img class="equal-vh w-100" src="assets/img/yoga_card_2.jpg" alt="Gentle & restorative yoga" loading="lazy">
-              <div class="p-4 copy">
-                <h3 class="h5 brand mb-2">Gentle & Restorative</h3>
-                <p class="mb-3">Release tension, restore flow, and cultivate awareness — without pushing.</p>
-                <ul class="feature-list">
-                  <li><span class="dot"></span><span>Slow breath + gentle stretch</span></li>
-                  <li><span class="dot"></span><span>Supportive holds and relaxation</span></li>
-                  <li><span class="dot"></span><span>Nervous-system friendly pacing</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
+    </nav>
 
-        <!-- FIXED: each header stays with its image on mobile -->
-        <div class="row g-4 mt-4">
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya">Mobility</h3>
-              <p class="mb-3">Build range of motion for real-life movement — step by step.</p>
-              <img class="img-edge" src="assets/img/mobility.jpg" alt="Mobility image" loading="lazy">
-            </div>
-          </div>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="content-wrap scroll-fade">
+            <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager" />
+            <p class="hero-tagline">
+                Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
+            </p>
 
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya">Pain relief</h3>
-              <p class="mb-3">Soften stiffness and unwind tension through breath and alignment.</p>
-              <img class="img-edge" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
+            <div class="row g-3 mt-4 text-start">
+                <div class="col-12 col-md-6">
+                    <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1"
+                        loading="lazy">
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Yoga / wellness image 2"
+                        loading="lazy">
+                </div>
             </div>
-          </div>
-
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya">Balance</h3>
-              <p class="mb-3">Find steadiness — physically, mentally, and emotionally — on and off the mat.</p>
-              <img class="img-edge" src="assets/img/balance.jpg" alt="Balance image" loading="lazy">
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- MISSION -->
-    <section id="mission">
-      <div class="content-wrap scroll-fade">
-        <div class="card-soft copy-card copy">
-          <h3 class="mb-3">Our Mission</h3>
+    <main>
+        <!-- Script headings + bands -->
+        <section class="pt-4 pb-0">
+            <div class="content-wrap">
+                <h1 class="script-heading scroll-fade">Live your life</h1>
+            </div>
+        </section>
 
-          <p class="lead">
-            Our intention is to offer simple, mindful tools that create meaningful shifts in how we move, breathe, and live —
-            through gentle, accessible yoga and heart-centered guidance.
-          </p>
+        <section class="pt-3">
+            <div class="content-wrap scroll-fade">
+                <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
+            </div>
+        </section>
 
-          <ul class="feature-list">
-            <li><span class="dot"></span><span>We support reconnection: calm in the everyday, strength in softness, and balance on and off the mat.</span></li>
-            <li><span class="dot"></span><span>We meet you where you are, honoring your body, your breath, and your journey.</span></li>
-            <li><span class="dot"></span><span>Every breath, every pose, and every moment of awareness is an invitation to return home to peace.</span></li>
-          </ul>
+        <section class="pt-2 pb-0">
+            <div class="content-wrap">
+                <h2 class="script-heading scroll-fade">On Your Terms</h2>
+            </div>
+        </section>
 
-          <hr class="my-4"/>
+        <section class="pt-3">
+            <div class="content-wrap scroll-fade">
+                <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
+            </div>
+        </section>
 
-          <p class="mb-2">
-            Tara offers sessions designed to meet every body where they’re at — gentle, mindful, and accessible, focused on releasing tension,
-            restoring flow, and cultivating awareness.
-          </p>
-          <p class="mb-0">
-            Paired with the vibroacoustic bed experience — soothing sound vibrations that calm the nervous system and ease the body into deep rest —
-            sessions create space where healing unfolds naturally.
-          </p>
+        <!-- YOGA INTRO -->
+        <section class="pb-0">
+            <div class="content-wrap">
+                <div class="kicker kaivalya scroll-fade">YOGA</div>
+                <p class="lead text-center copy mt-3 scroll-fade" style="max-width:68ch;">
+                    Gentle and accessible yoga designed to meet every body where they’re at.
+                </p>
+            </div>
+        </section>
+
+        <!-- Yoga offerings -->
+        <section class="pt-4">
+            <div class="content-wrap">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-12 col-lg-6 scroll-fade">
+                        <div class="card-soft h-100">
+                            <img class="equal-vh w-100" src="assets/img/yoga_card_1.jpg" alt="Chair yoga"
+                                loading="lazy">
+                            <div class="p-4 copy">
+                                <h3 class="h5 brand mb-2">Chair Yoga</h3>
+                                <p class="mb-3">Supportive movement with options for every body — build strength,
+                                    mobility, and confidence.</p>
+                                <ul class="feature-list">
+                                    <li><span class="dot"></span><span>Gentle, joint-friendly sequences</span></li>
+                                    <li><span class="dot"></span><span>Breath-led pacing and mindful cues</span></li>
+                                    <li><span class="dot"></span><span>Comfort, consistency, and calm</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 scroll-fade">
+                        <div class="card-soft h-100">
+                            <img class="equal-vh w-100" src="assets/img/yoga_card_2.jpg" alt="Gentle & restorative yoga"
+                                loading="lazy">
+                            <div class="p-4 copy">
+                                <h3 class="h5 brand mb-2">Gentle & Restorative</h3>
+                                <p class="mb-3">Release tension, restore flow, and cultivate awareness — without
+                                    pushing.</p>
+                                <ul class="feature-list">
+                                    <li><span class="dot"></span><span>Slow breath + gentle stretch</span></li>
+                                    <li><span class="dot"></span><span>Supportive holds and relaxation</span></li>
+                                    <li><span class="dot"></span><span>Nervous-system friendly pacing</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIXED: each header stays with its image on mobile -->
+                <div class="row g-4 mt-4">
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h3 class="h6 brand mb-2 kaivalya">Mobility</h3>
+                            <p class="mb-3">Build range of motion for real-life movement — step by step.</p>
+                            <img class="benefit-img" src="assets/img/mobility.jpg" alt="Mobility image" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h3 class="h6 brand mb-2 kaivalya">Pain relief</h3>
+                            <p class="mb-3">Soften stiffness and unwind tension through breath and alignment.</p>
+                            <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h3 class="h6 brand mb-2 kaivalya">Balance</h3>
+                            <p class="mb-3">Find steadiness — physically, mentally, and emotionally — on and off the
+                                mat.</p>
+                            <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance image" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION -->
+        <section id="mission">
+            <div class="content-wrap scroll-fade">
+                <div class="card-soft copy-card copy">
+                    <h3 class="mb-3">Our Mission</h3>
+
+                    <p class="lead">
+                        Our intention is to offer simple, mindful tools that create meaningful shifts in how we move,
+                        breathe, and live —
+                        through gentle, accessible yoga and heart-centered guidance.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li><span class="dot"></span><span>We support reconnection: calm in the everyday, strength in
+                                softness, and balance on and off the mat.</span></li>
+                        <li><span class="dot"></span><span>We meet you where you are, honoring your body, your breath,
+                                and your journey.</span></li>
+                        <li><span class="dot"></span><span>Every breath, every pose, and every moment of awareness is an
+                                invitation to return home to peace.</span></li>
+                    </ul>
+
+                    <hr class="my-4" />
+
+                    <p class="mb-2">
+                        Tara offers sessions designed to meet every body where they’re at — gentle, mindful, and
+                        accessible, focused on releasing tension,
+                        restoring flow, and cultivating awareness.
+                    </p>
+                    <p class="mb-0">
+                        Paired with the vibroacoustic bed experience — soothing sound vibrations that calm the nervous
+                        system and ease the body into deep rest —
+                        sessions create space where healing unfolds naturally.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEET TARA -->
+        <section id="who">
+            <div class="content-wrap">
+                <div class="card-soft copy-card copy scroll-fade">
+                    <h3 class="mb-3">Meet Tara</h3>
+
+                    <p class="lead">
+                        Tara Copp is the founder of Tarasana Yoga and a certified yoga instructor specializing in
+                        gentle, restorative, and accessible practices.
+                    </p>
+
+                    <p>
+                        After spending over thirty years in the service industry, Tara knows firsthand how hard constant
+                        movement and long hours can be on the body and mind.
+                        Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
+                        slow down, listen inward, and rebuild balance from the inside out.
+                    </p>
+
+                    <p>
+                        Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
+                        she’s learned:
+                        caring for your body is not a luxury, but an essential act of growth. Her classes offer a calm
+                        space to breathe, soften, and reconnect —
+                        one mindful moment at a time.
+                    </p>
+
+                    <blockquote class="quote">
+                        “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a steady
+                        vibration.
+                        These are the moments that help us return home to peace.”
+                        <cite>— Tara Copp</cite>
+                    </blockquote>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIBROACOUSTIC THERAPY (new, concise, matching style) -->
+        <section id="vibro">
+            <div class="content-wrap">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
+                    <h3 class="mb-0">Vibroacoustic Therapy</h3>
+                    <span class="pill">Touchless meditative massage</span>
+                </div>
+
+                <div class="row g-4">
+                    <!-- What it is -->
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h4 class="h6 brand mb-2">What it is</h4>
+                            <p class="mb-0">
+                                Vibroacoustic Therapy (VAT) combines low-frequency sound vibrations with therapeutic
+                                music. You recline on a vibroacoustic bed with embedded
+                                tactile transducers while using headphones, creating a calming, whole-body experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h4 class="h6 brand mb-2">Benefits &amp; support areas</h4>
+                            <ul class="feature-list mt-0">
+                                <li><span class="dot"></span><span>Stress &amp; anxiety support</span></li>
+                                <li><span class="dot"></span><span>Pain &amp; discomfort support</span></li>
+                                <li><span class="dot"></span><span>Muscle tension &amp; spasticity support</span></li>
+                                <li><span class="dot"></span><span>Sleep disturbances support</span></li>
+                                <li><span class="dot"></span><span>Mood &amp; emotional well-being</span></li>
+                                <li><span class="dot"></span><span>Mental clarity &amp; focus</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- What to expect -->
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <h4 class="h6 brand mb-2">What to expect</h4>
+                            <ul class="feature-list mt-0">
+                                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span>
+                                </li>
+                                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones +
+                                        optional eye mask)</span></li>
+                                <li><span class="dot"></span><span>Frequencies are selected based on your needs</span>
+                                </li>
+                                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span>
+                                </li>
+                                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your
+                                        goals</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session lengths -->
+                <div class="row g-4 mt-2">
+                    <div class="col-12 col-md-6 col-lg-3 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <div class="pill mb-2">15 minutes</div>
+                            <p class="mb-0">Quick reset: stress relief, power nap, or a first-time introduction.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <div class="pill mb-2">30 minutes</div>
+                            <p class="mb-0">A full experience for relaxation and steady wellness maintenance.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <div class="pill mb-2">45 minutes</div>
+                            <p class="mb-0">Deeper meditation states and comprehensive stress reduction.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 scroll-fade">
+                        <div class="card-soft copy-card copy h-100">
+                            <div class="pill mb-2">60 minutes</div>
+                            <p class="mb-0">Deepest session: multiple frequencies for chronic concerns and profound
+                                relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frequencies (kept concise + non-medical) -->
+                <div class="card-soft copy-card copy mt-4 scroll-fade">
+                    <h4 class="h6 brand mb-2">Therapeutic frequencies</h4>
+                    <p class="mb-3">
+                        VAT uses ultra-low frequencies (about <strong>20–120 Hz</strong>) to send gentle vibrations
+                        through the body’s water-rich tissues,
+                        encouraging relaxation, tension release, and a return to balance.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <div class="pill mb-2">30–40 Hz</div>
+                                <p class="mb-0">Commonly associated with attention, memory, and mental clarity (40 Hz is
+                                    often highlighted for brain health support).</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <div class="pill mb-2">40–60 Hz</div>
+                                <p class="mb-0">Often linked with energizing effects, improved alertness, and enhanced
+                                    mood.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <div class="pill mb-2">60–80 Hz</div>
+                                <p class="mb-0">Connected to balance, harmony, and deeper relaxation.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <div class="pill mb-2">80–120 Hz</div>
+                                <p class="mb-0">Associated with gentle stimulation, circulation support, and muscle
+                                    relaxation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="small mt-3 mb-0" style="max-width:68ch;">
+                        Note: These descriptions are wellness-oriented and not a substitute for medical care. If you
+                        have a medical condition, ask your provider what’s appropriate.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE (Acuity) -->
+        <section id="schedule">
+            <div class="content-wrap scroll-fade">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                    <h3 class="mb-0">Schedule & Booking</h3>
+                    <a class="btn btn-outline-primary"
+                        href="https://app.acuityscheduling.com/schedule.php?owner=37818194" target="_blank"
+                        rel="noreferrer">
+                        Open booking in a new tab
+                    </a>
+                </div>
+
+                <div class="embed-shell">
+                    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
+                        style="width:100%;height:950px;border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Acuity Scheduling">
+                    </iframe>
+                </div>
+
+                <p class="small mt-3 mb-0" style="max-width:68ch;">
+                    Choose a time that works for you. If the scheduler ever feels tight on mobile, the “Open booking”
+                    button above is the best experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="content-wrap scroll-fade">
+                <div class="card-soft copy-card">
+                    <h3 class="mb-3">Contact Us</h3>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-md-6">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <h4 class="h6 brand mb-2">CareMore Health &amp; Wellness</h4>
+                                <p class="mb-1"><strong>Phone:</strong> (607) 226-4755</p>
+                                <p class="mb-1"><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott, NY
+                                    13760</p>
+                                <p class="mb-0"><strong>Website:</strong> tarasana.org</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
+                                <h4 class="h6 brand mb-2">Quick links</h4>
+                                <ul class="feature-list mt-0">
+                                    <li><span class="dot"></span><span><a href="#schedule">Book a session</a></span>
+                                    </li>
+                                    <li><span class="dot"></span><span><a href="#vibro">Vibroacoustic therapy
+                                                info</a></span></li>
+                                    <li><span class="dot"></span><span><a href="#who">Meet Tara</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6 form-floating">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <label for="name">Name</label>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+
+                        <div class="col-md-6 form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            <label for="email">Email</label>
+                            <div class="invalid-feedback">A valid email is required.</div>
+                        </div>
+
+                        <div class="col-md-6 form-floating">
+                            <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555">
+                            <label for="phone">Phone</label>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label d-block">Contact Preference</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pref" id="prefEmail" value="email"
+                                    checked>
+                                <label class="form-check-label" for="prefEmail">Email</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pref" id="prefPhone" value="phone">
+                                <label class="form-check-label" for="prefPhone">Phone</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12 form-floating">
+                            <textarea class="form-control" placeholder="Your message" id="message" style="height: 140px"
+                                required></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback">Please add a short message.</div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                            <span class="small text-muted">Demo mode until wired to a backend.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="content-wrap">
+            <small>&copy; <span id="year"></span> Tarasana. All rights reserved.</small>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- MEET TARA -->
-    <section id="who">
-      <div class="content-wrap">
-        <div class="card-soft copy-card copy scroll-fade">
-          <h3 class="mb-3">Meet Tara</h3>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-          <p class="lead">
-            Tara Copp is the founder of Tarasana Yoga and a certified yoga instructor specializing in gentle, restorative, and accessible practices.
-          </p>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-          <p>
-            After spending over thirty years in the service industry, Tara knows firsthand how hard constant movement and long hours can be on the body and mind.
-            Her own journey through pain and fatigue led her to yoga — a practice that taught her how to slow down, listen inward, and rebuild balance from the inside out.
-          </p>
-
-          <p>
-            Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what she’s learned:
-            caring for your body is not a luxury, but an essential act of growth. Her classes offer a calm space to breathe, soften, and reconnect —
-            one mindful moment at a time.
-          </p>
-
-          <blockquote class="quote">
-            “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a steady vibration.
-            These are the moments that help us return home to peace.”
-            <cite>— Tara Copp</cite>
-          </blockquote>
-        </div>
-
-        <div class="row g-3 mt-4">
-          <div class="col-12 col-md-6 scroll-fade">
-            <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
-          </div>
-          <div class="col-12 col-md-6 scroll-fade">
-            <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIBROACOUSTIC THERAPY (new, concise, matching style) -->
-    <section id="vibro">
-      <div class="content-wrap">
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
-          <h3 class="mb-0">Vibroacoustic Therapy</h3>
-          <span class="pill">Touchless meditative massage</span>
-        </div>
-
-        <div class="row g-4">
-          <!-- What it is -->
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h4 class="h6 brand mb-2">What it is</h4>
-              <p class="mb-0">
-                Vibroacoustic Therapy (VAT) combines low-frequency sound vibrations with therapeutic music. You recline on a vibroacoustic bed with embedded
-                tactile transducers while using headphones, creating a calming, whole-body experience.
-              </p>
-            </div>
-          </div>
-
-          <!-- Benefits -->
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h4 class="h6 brand mb-2">Benefits &amp; support areas</h4>
-              <ul class="feature-list mt-0">
-                <li><span class="dot"></span><span>Stress &amp; anxiety support</span></li>
-                <li><span class="dot"></span><span>Pain &amp; discomfort support</span></li>
-                <li><span class="dot"></span><span>Muscle tension &amp; spasticity support</span></li>
-                <li><span class="dot"></span><span>Sleep disturbances support</span></li>
-                <li><span class="dot"></span><span>Mood &amp; emotional well-being</span></li>
-                <li><span class="dot"></span><span>Mental clarity &amp; focus</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- What to expect -->
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h4 class="h6 brand mb-2">What to expect</h4>
-              <ul class="feature-list mt-0">
-                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span></li>
-                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones + optional eye mask)</span></li>
-                <li><span class="dot"></span><span>Frequencies are selected based on your needs</span></li>
-                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span></li>
-                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your goals</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Session lengths -->
-        <div class="row g-4 mt-2">
-          <div class="col-12 col-md-6 col-lg-3 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <div class="pill mb-2">15 minutes</div>
-              <p class="mb-0">Quick reset: stress relief, power nap, or a first-time introduction.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <div class="pill mb-2">30 minutes</div>
-              <p class="mb-0">A full experience for relaxation and steady wellness maintenance.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <div class="pill mb-2">45 minutes</div>
-              <p class="mb-0">Deeper meditation states and comprehensive stress reduction.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <div class="pill mb-2">60 minutes</div>
-              <p class="mb-0">Deepest session: multiple frequencies for chronic concerns and profound relaxation.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frequencies (kept concise + non-medical) -->
-        <div class="card-soft copy-card copy mt-4 scroll-fade">
-          <h4 class="h6 brand mb-2">Therapeutic frequencies</h4>
-          <p class="mb-3">
-            VAT often uses ultra-low frequencies (about <strong>20–120 Hz</strong>) to send gentle vibrations through the body’s water-rich tissues,
-            encouraging relaxation, tension release, and a return to balance.
-          </p>
-
-          <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <div class="pill mb-2">30–40 Hz</div>
-                <p class="mb-0">Commonly associated with attention, memory, and mental clarity (40 Hz is often highlighted for brain health support).</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <div class="pill mb-2">40–60 Hz</div>
-                <p class="mb-0">Often linked with energizing effects, improved alertness, and enhanced mood.</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <div class="pill mb-2">60–80 Hz</div>
-                <p class="mb-0">Connected to balance, harmony, and deeper relaxation.</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <div class="pill mb-2">80–120 Hz</div>
-                <p class="mb-0">Associated with gentle stimulation, circulation support, and muscle relaxation.</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="small mt-3 mb-0" style="max-width:68ch;">
-            Note: These descriptions are wellness-oriented and not a substitute for medical care. If you have a medical condition, ask your provider what’s appropriate.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCHEDULE (Acuity) -->
-    <section id="schedule">
-      <div class="content-wrap scroll-fade">
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-          <h3 class="mb-0">Schedule & Booking</h3>
-          <a class="btn btn-outline-primary"
-             href="https://app.acuityscheduling.com/schedule.php?owner=37818194"
-             target="_blank" rel="noreferrer">
-            Open booking in a new tab
-          </a>
-        </div>
-
-        <div class="embed-shell">
-          <iframe
-            src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
-            style="width:100%;height:950px;border:0;"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Acuity Scheduling">
-          </iframe>
-        </div>
-
-        <p class="small mt-3 mb-0" style="max-width:68ch;">
-          Choose a time that works for you. If the embed ever feels tight on mobile, the “Open booking” button above is the best experience.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="content-wrap scroll-fade">
-        <div class="card-soft copy-card">
-          <h3 class="mb-3">Contact Us</h3>
-
-          <div class="row g-3 mb-3">
-            <div class="col-12 col-md-6">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <h4 class="h6 brand mb-2">CareMore Health &amp; Wellness</h4>
-                <p class="mb-1"><strong>Phone:</strong> (607) 226-4755</p>
-                <p class="mb-1"><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott, NY 13760</p>
-                <p class="mb-0"><strong>Website:</strong> caremorehealthandwellness.com</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="card-soft copy-card copy h-100" style="box-shadow:none;">
-                <h4 class="h6 brand mb-2">Quick links</h4>
-                <ul class="feature-list mt-0">
-                  <li><span class="dot"></span><span><a href="#schedule">Book a session</a></span></li>
-                  <li><span class="dot"></span><span><a href="#vibro">Vibroacoustic therapy info</a></span></li>
-                  <li><span class="dot"></span><span><a href="#who">Meet Tara</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-6 form-floating">
-              <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-              <label for="name">Name</label>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-
-            <div class="col-md-6 form-floating">
-              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-              <label for="email">Email</label>
-              <div class="invalid-feedback">A valid email is required.</div>
-            </div>
-
-            <div class="col-md-6 form-floating">
-              <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555">
-              <label for="phone">Phone</label>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label d-block">Contact Preference</label>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="pref" id="prefEmail" value="email" checked>
-                <label class="form-check-label" for="prefEmail">Email</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="pref" id="prefPhone" value="phone">
-                <label class="form-check-label" for="prefPhone">Phone</label>
-              </div>
-            </div>
-
-            <div class="col-12 form-floating">
-              <textarea class="form-control" placeholder="Your message" id="message" style="height: 140px" required></textarea>
-              <label for="message">Message</label>
-              <div class="invalid-feedback">Please add a short message.</div>
-            </div>
-
-            <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
-              <button class="btn btn-primary" type="submit">Send</button>
-              <span class="small text-muted">Demo mode until wired to a backend.</span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="content-wrap">
-      <small>&copy; <span id="year"></span> Tarasana. All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Smooth scroll links
-    const links = document.querySelectorAll('a.nav-link[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const id = link.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (el) {
-          e.preventDefault();
-          window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
-          const navbar = document.getElementById('mainNav');
-          if (navbar && navbar.classList.contains('show')) new bootstrap.Collapse(navbar).hide();
-        }
-      });
-    });
-
-    // Subtle distance-based fade
-    (function() {
-      const items = Array.from(document.querySelectorAll('.scroll-fade'));
-      function update() {
-        const vh = window.innerHeight;
-        const center = vh * 0.55;
-        items.forEach(el => {
-          const r = el.getBoundingClientRect();
-          const mid = r.top + r.height/2;
-          const dist = Math.abs(mid - center);
-          const maxDist = vh;
-          const ratio = 1 - Math.min(dist / maxDist, 1);
-          const opacity = 0.78 + 0.22 * ratio;
-          el.style.opacity = opacity.toFixed(2);
+        // Smooth scroll links
+        const links = document.querySelectorAll('a.nav-link[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const id = link.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (el) {
+                    e.preventDefault();
+                    window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
+                    const navbar = document.getElementById('mainNav');
+                    if (navbar && navbar.classList.contains('show')) new bootstrap.Collapse(navbar).hide();
+                }
+            });
         });
-      }
-      ['scroll','resize','load'].forEach(e => window.addEventListener(e, update, { passive: true }));
-      update();
-    })();
 
-    // Bootstrap validation (demo only)
-    (() => {
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          } else {
-            event.preventDefault();
-            alert('Thanks! Your message has been recorded (demo only).');
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    })();
-  </script>
+        // Subtle distance-based fade
+        (function () {
+            const items = Array.from(document.querySelectorAll('.scroll-fade'));
+            function update() {
+                const vh = window.innerHeight;
+                const center = vh * 0.55;
+                items.forEach(el => {
+                    const r = el.getBoundingClientRect();
+                    const mid = r.top + r.height / 2;
+                    const dist = Math.abs(mid - center);
+                    const maxDist = vh;
+                    const ratio = 1 - Math.min(dist / maxDist, 1);
+                    const opacity = 0.78 + 0.22 * ratio;
+                    el.style.opacity = opacity.toFixed(2);
+                });
+            }
+            ['scroll', 'resize', 'load'].forEach(e => window.addEventListener(e, update, { passive: true }));
+            update();
+        })();
+
+        // Bootstrap validation (demo only)
+        (() => {
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        alert('Thanks! Your message has been recorded (demo only).');
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
 </body>
+
 </html>
