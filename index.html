@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@400;600;700&family=Kaivalya&display=swap"
         rel="stylesheet">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 
     <style>
         :root {
@@ -60,6 +64,20 @@
             color: rgba(31, 42, 51, .86);
         }
 
+        /* Make the YOGA kicker a bit larger */
+        .kicker {
+            font-size: 1.15rem;
+            /* bump up */
+        }
+
+        @media (min-width: 992px) {
+            .kicker {
+                font-size: 1.25rem;
+                /* slightly bigger on desktop */
+            }
+        }
+
+        
         .kaivalya {
             font-family: 'Kaivalya', 'Cinzel', serif;
             letter-spacing: .02em;
@@ -428,8 +446,9 @@
                         <div class="card-soft copy-card copy h-100">
                             <h3 class="h6 brand mb-2 kaivalya">Pain relief</h3>
                             <p class="mb-3">Soften stiffness and unwind tension through breath and alignment.</p>
-                            <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
+                            <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image"
                                 loading="lazy">
+
                         </div>
                     </div>
 
