@@ -226,6 +226,45 @@
                 height: auto;
             }
         }
+
+        /* ===== Force image to follow card height (Chair Yoga fix) ===== */
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        /* Card defines the height */
+        .split-card {
+            align-self: start;
+        }
+
+        /* Image fills card height */
+        .split-media {
+            height: 100%;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+
+        .split-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Mobile stack */
+        @media (max-width: 992px) {
+            .split {
+                grid-template-columns: 1fr;
+            }
+
+            .split-media img {
+                height: auto;
+            }
+        }
     </style>
 </head>
 
@@ -311,7 +350,8 @@
                             <img src="../assets/img/yoga_card_1.jpg" alt="Chair Yoga" loading="lazy">
                         </div>
 
-                        <div class="card-soft p-4 copy card-hover">
+                        <div class="card-soft split-card p-4 copy">
+
                             <h2 class="mb-2">Chair Yoga</h2>
                             <p class="mb-3">
                                 Chair Yoga is supportive and accessible for all ages, body types, and fitness levels.
@@ -403,7 +443,14 @@
                         <p class="mb-0"><strong>Email:</strong> <a href="mailto:tara@tarasana.org">tara@tarasana.org</a>
                         </p>
                         <p class="mb-0"><strong>Website:</strong> tarasana.org</p>
-                        <p class="mb-1"><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott, NY 13760</p>
+                        <p class="mb-0">
+                            <strong>Address:</strong>
+                            <a href="https://www.google.com/maps/search/?api=1&query=1104+Union+Center+Maine+Hwy,+Endicott+NY+13760"
+                                target="_blank" rel="noopener">
+                                1104 Union Center Maine Hwy, Endicott NY 13760
+                            </a>
+                        </p>
+
 
                     </div>
                 </div>
