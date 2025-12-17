@@ -147,6 +147,21 @@
             box-shadow: var(--shadow);
         }
 
+        /* Hover lift */
+        .card-hover {
+            transition: transform .2s ease, box-shadow .2s ease;
+            will-change: transform;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
+            z-index: 5;
+        }
+
+
         .copy-card {
             padding: 1.75rem;
         }
@@ -418,9 +433,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="text-center mt-4">
-                    <a class="btn btn-outline-dark px-4" href="yoga/">Explore Yoga Modalities</a>
+                        <a class="btn btn-outline-dark px-4" href="yoga/">Explore Yoga Modalities</a>
                     </div>
                 </div>
         </section>
@@ -505,7 +520,8 @@
                                     strength in softness,
                                     and balance both on and off the mat. We meet you where <strong>you</strong> are,
                                     honoring <strong>your</strong> body, <strong>your</strong> breath,
-                                    and <strong>your</strong>> journey. Every breath, every pose, and every moment of awareness is an
+                                    and <strong>your</strong>> journey. Every breath, every pose, and every moment of
+                                    awareness is an
                                     invitation to return home to peace.
                                 </p>
                             </div>
@@ -523,48 +539,52 @@
         </section>
 
         <!-- MEET TARA -->
-        
+
         <section id="who">
             <div class="content-wrap">
-                <h2 class="section-title scroll-fade">Meet Tara</h2><section id="who">
-                <div class="card-soft copy-card copy scroll-fade">
-                    <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
-                        Tara Copp is as certified yoga instructor, and the founder of Tarasana Yoga, specializing in
-                        gentle, restorative,
-                        and accessible practices.
-                    </p>
+                <h2 class="section-title scroll-fade">Meet Tara</h2>
+                <section id="who">
+                    <div class="card-soft copy-card copy scroll-fade">
+                        <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
+                            Tara Copp is as certified yoga instructor, and the founder of Tarasana Yoga, specializing in
+                            gentle, restorative,
+                            and accessible practices.
+                        </p>
 
-                    <p>
-                        After spending over thirty years in the service industry, Tara knows firsthand how hard constant
-                        movement and long hours can be on the body and mind.
-                        Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
-                        slow down, listen inward, and rebuild balance from the inside out.
-                    </p>
+                        <p>
+                            After spending over thirty years in the service industry, Tara knows firsthand how hard
+                            constant
+                            movement and long hours can be on the body and mind.
+                            Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
+                            slow down, listen inward, and rebuild balance from the inside out.
+                        </p>
 
-                    <p class="mb-0">
-                        Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
-                        she’s learned:
-                        caring for your body is not a luxury, but an essential act of growth. Her classes offer a calm
-                        space to breathe, soften,
-                        and reconnect — one mindful moment at a time.
-                    </p>
+                        <p class="mb-0">
+                            Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
+                            she’s learned:
+                            caring for your body is not a luxury, but an essential act of growth. Her classes offer a
+                            calm
+                            space to breathe, soften,
+                            and reconnect — one mindful moment at a time.
+                        </p>
 
-                    <blockquote class="quote">
-                        “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a steady
-                        vibration.
-                        These are the moments that help us return home to peace.”
-                        <cite>— Tara Copp</cite>
-                    </blockquote>
-                </div>
-
-                <div class="row g-3 mt-4">
-                    <div class="col-12 col-md-6 scroll-fade">
-                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
+                        <blockquote class="quote">
+                            “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a
+                            steady
+                            vibration.
+                            These are the moments that help us return home to peace.”
+                            <cite>— Tara Copp</cite>
+                        </blockquote>
                     </div>
-                    <div class="col-12 col-md-6 scroll-fade">
-                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
+
+                    <div class="row g-3 mt-4">
+                        <div class="col-12 col-md-6 scroll-fade">
+                            <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
+                        </div>
+                        <div class="col-12 col-md-6 scroll-fade">
+                            <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
+                        </div>
                     </div>
-                </div>
             </div>
         </section>
 
@@ -589,13 +609,21 @@
                 <div class="card-soft copy-card copy scroll-fade">
                     <h2 class="section-title mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Contact</h2>
                     <ul class="feature-list">
-                        <li><span class="dot"></span><span><strong>Phone:</strong> (607) 226-4755</span></li>
-                        <li><span class="dot"></span><span><strong>Email:</strong> tara@tarasana.org</span></li>
+                        <li>
+                            <span class="dot"></span>
+                            <span><strong>Phone:</strong> <a href="tel:+16072264755">(607) 226-4755</a></span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <span><strong>Email:</strong> <a
+                                    href="mailto:tara@tarasana.org">tara@tarasana.org</a></span>
+                        </li>
+
                         <li><span class="dot"></span><span><strong>Location:</strong> CareMore Health &amp;
                                 Wellness</span></li>
                         <li><span class="dot"></span><span><strong>Address:</strong> 1104 Union Center Maine Hwy,
                                 Endicott NY 13760</span></li>
-                        
+
                     </ul>
 
                     <hr class="my-4" style="opacity:.12;">

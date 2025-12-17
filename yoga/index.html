@@ -85,6 +85,21 @@
             box-shadow: var(--shadow);
         }
 
+        /* Hover lift */
+        .card-hover {
+            transition: transform .2s ease, box-shadow .2s ease;
+            will-change: transform;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
+            z-index: 5;
+        }
+
+
         .copy {
             font-family: 'Poppins', sans-serif;
             color: var(--muted);
@@ -135,6 +150,27 @@
             box-shadow: var(--shadow);
             display: block;
         }
+
+        /* Match image height to the text card height (desktop only) */
+        @media (min-width: 992px) {
+            .match-height>[class*="col-"] {
+                height: 100%;
+            }
+
+            .match-height .img-card {
+                height: 100% !important;
+                /* override the 260px rule on desktop */
+            }
+        }
+
+        /* When stacked on mobile/tablet, keep a nice fixed image height */
+        @media (max-width: 991.98px) {
+            .match-height .img-card {
+                height: 260px;
+                /* same as your current design */
+            }
+        }
+
 
         .embed-shell {
             background: #fff;
@@ -241,10 +277,11 @@
             <!-- Chair Yoga -->
             <section>
                 <div class="content-wrap">
-                    <div class="row g-4 align-items-stretch">
+                    <div class="row g-4 align-items-stretch match-height">
                         <div class="col-12 col-lg-6">
                             <img class="img-card" src="../assets/img/yoga_card_1.jpg" alt="Chair Yoga" loading="lazy">
                         </div>
+
                         <div class="col-12 col-lg-6">
                             <div class="card-soft p-4 copy h-100">
                                 <h2 class="mb-2">Chair Yoga</h2>
@@ -255,18 +292,16 @@
                                     mobility,
                                     or simply want a steadier, more supported practice.
                                 </p>
+
                                 <ul class="feature-list mt-0">
                                     <li><span class="dot"></span><span>Options for standing or seated movement</span>
                                     </li>
                                     <li><span class="dot"></span><span>Joint-friendly pacing with clear, simple
-                                            cues</span>
-                                    </li>
+                                            cues</span></li>
                                     <li><span class="dot"></span><span>Build strength, mobility, and confidence —
-                                            without
-                                            pushing</span></li>
+                                            without pushing</span></li>
                                     <li><span class="dot"></span><span>Breath-led movement + nervous-system
-                                            calming</span>
-                                    </li>
+                                            calming</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -274,14 +309,16 @@
                 </div>
             </section>
 
+
             <!-- Gentle Slow Flow -->
             <section>
                 <div class="content-wrap">
-                    <div class="row g-4 align-items-stretch">
+                    <div class="row g-4 align-items-stretch match-height">
                         <div class="col-12 col-lg-6 order-lg-2">
                             <img class="img-card" src="../assets/img/yoga_card_2.jpg" alt="Gentle Slow Flow"
                                 loading="lazy">
                         </div>
+
                         <div class="col-12 col-lg-6 order-lg-1">
                             <div class="card-soft p-4 copy h-100">
                                 <h2 class="mb-2">Gentle Slow Flow</h2>
@@ -292,6 +329,7 @@
                                     supportive
                                     props to meet you exactly where you are.
                                 </p>
+
                                 <ul class="feature-list mt-0">
                                     <li><span class="dot"></span><span>Longer holds + slow transitions for comfort and
                                             awareness</span></li>
@@ -299,8 +337,7 @@
                                             support</span></li>
                                     <li><span class="dot"></span><span>Modifications offered for every body</span></li>
                                     <li><span class="dot"></span><span>A calm space to breathe, soften, and
-                                            reconnect</span>
-                                    </li>
+                                            reconnect</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -318,6 +355,7 @@
                     </div>
                 </div>
             </section>
+
 
             <!-- SCHEDULE (bottom) -->
             <section id="schedule" class="pb-0">
@@ -350,8 +388,9 @@
                 <div class="content-wrap">
                     <div class="card-soft p-4 copy">
                         <h2 class="mb-3">Contact Us</h2>
-                        <p class="mb-1"><strong>Phone:</strong> (607) 226-4755</p>
-                        <p class="mb-0"><strong>Email:</strong> tara@tarasana.org</p>
+                        <p class="mb-1"><strong>Phone:</strong> <a href="tel:+16072264755">(607) 226-4755</a></p>
+                        <p class="mb-0"><strong>Email:</strong> <a href="mailto:tara@tarasana.org">tara@tarasana.org</a>
+                        </p>
                         <p class="mb-0"><strong>Website:</strong> tarasana.org</p>
                         <p class="mb-1"><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott, NY 13760</p>
 

@@ -98,6 +98,21 @@
             box-shadow: var(--shadow);
         }
 
+        /* Hover lift */
+        .card-hover {
+            transition: transform .2s ease, box-shadow .2s ease;
+            will-change: transform;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
+            z-index: 5;
+        }
+
+
         .copy {
             font-family: 'Poppins', sans-serif;
             color: var(--muted);
@@ -365,8 +380,8 @@
             <div class="content-wrap">
                 <div class="card-soft p-4 copy">
                     <h2 class="mb-3">Contact Us</h2>
-                    <p class="mb-1"><strong>Phone:</strong> (607) 226-4755</p>
-                    <p class="mb-0"><strong>Email:</strong> tara@tarasana.org</p>
+                    <p class="mb-1"><strong>Phone:</strong> <a href="tel:+16072264755">(607) 226-4755</a></p>
+                    <p class="mb-0"><strong>Email:</strong> <a href="mailto:tara@tarasana.org">tara@tarasana.org</a></p>
                     <p class="mb-0"><strong>Website:</strong> tarasana.org</p>
                     <p class="mb-1"><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott, NY 13760</p>
                 </div>
