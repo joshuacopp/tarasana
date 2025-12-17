@@ -2,563 +2,621 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tarasana — Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tarasana — Home</title>
 
-  <!-- Favicons (put these files at repo root) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Favicons (put these files at repo root) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@500;700&family=Kaivalya&display=swap"
-    rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@500;700&family=Kaivalya&display=swap"
+        rel="stylesheet">
 
-  <style>
-    :root {
-      --ink: rgba(31, 42, 51, .92);
-      --muted: rgba(31, 42, 51, .78);
-      --hair: rgba(0, 0, 0, .08);
-      --card: rgba(255, 255, 255, .92);
-      --shadow: 0 12px 40px rgba(0, 0, 0, .06);
-      --radius: 22px;
-    }
+    <style>
+        :root {
+            --ink: rgba(31, 42, 51, .92);
+            --muted: rgba(31, 42, 51, .78);
+            --hair: rgba(0, 0, 0, .08);
+            --card: rgba(255, 255, 255, .92);
+            --shadow: 0 12px 40px rgba(0, 0, 0, .06);
+            --radius: 22px;
+        }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--ink);
-      background: #fff;
-      line-height: 1.7;
-      font-size: 18px;
-    }
+        /* Background mandala behind everything */
+        html,
+        body {
+            height: 100%;
+        }
 
-    @media (max-width: 576px) {
-      body {
-        font-size: 17px;
-      }
-    }
+        body {
+            position: relative;
+            background: #fff;
+            /* base background */
+        }
 
-    /* Layout */
-    .content-wrap {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
+        /* fixed “watermark” layer */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            /* behind all content */
+            pointer-events: none;
+            /* never interferes with clicks */
+            background-image: url("assets/img/mandala.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min(900px, 85vmin);
+            opacity: 0.08;
+            /* subtle */
+            filter: blur(0px);
+            /* optional */
+        }
 
-    section {
-      padding: 3.25rem 0;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.7;
+            font-size: 18px;
+        }
 
-    @media (max-width: 576px) {
-      section {
-        padding: 2.5rem 0;
-      }
-    }
+        @media (max-width: 576px) {
+            body {
+                font-size: 17px;
+            }
+        }
 
-    /* Typography */
-    .script-heading {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(2.4rem, 4vw + 1rem, 5rem);
-      text-align: center;
-      margin: 1.5rem 0 .75rem;
-      color: var(--ink);
-    }
+        /* Layout */
+        .content-wrap {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-    .kicker {
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      text-align: center;
-      font-weight: 700;
-      color: rgba(31, 42, 51, .86);
-      font-size: 1.15rem;
-    }
+        section {
+            padding: 3.25rem 0;
+        }
 
-    @media (min-width: 992px) {
-      .kicker {
-        font-size: 1.25rem;
-      }
-    }
+        @media (max-width: 576px) {
+            section {
+                padding: 2.5rem 0;
+            }
+        }
 
-    .kaivalya {
-      font-family: 'Kaivalya', 'Cinzel', serif;
-      letter-spacing: .02em;
-      text-transform: none;
-    }
+        /* Typography */
+        .script-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.4rem, 4vw + 1rem, 5rem);
+            text-align: center;
+            margin: 1.5rem 0 .75rem;
+            color: var(--ink);
+        }
 
-    .section-title {
-      font-family: 'Kaivalya', 'Cinzel', serif;
-      letter-spacing: .02em;
-      text-transform: none;
-      font-size: clamp(2rem, 2.2vw + 1rem, 3.2rem);
-      margin: 0 0 1rem;
-      color: var(--ink);
-    }
+        .kicker {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            color: rgba(31, 42, 51, .86);
+            font-size: 1.15rem;
+        }
 
-    /* Readable copy */
-    p {
-      color: var(--muted);
-    }
+        @media (min-width: 992px) {
+            .kicker {
+                font-size: 1.25rem;
+            }
+        }
 
-    .copy p,
-    .copy li,
-    .copy blockquote {
-      max-width: 68ch;
-    }
+        .kaivalya {
+            font-family: 'Kaivalya', 'Cinzel', serif;
+            letter-spacing: .02em;
+            text-transform: none;
+        }
 
-    /* Cards */
-    .card-soft {
-      background: var(--card);
-      border: 1px solid var(--hair);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+        .section-title {
+            font-family: 'Kaivalya', 'Cinzel', serif;
+            letter-spacing: .02em;
+            text-transform: none;
+            font-size: clamp(2rem, 2.2vw + 1rem, 3.2rem);
+            margin: 0 0 1rem;
+            color: var(--ink);
+        }
 
-    .copy-card {
-      padding: 1.75rem;
-    }
+        /* Readable copy */
+        p {
+            color: var(--muted);
+        }
 
-    @media (min-width: 992px) {
-      .copy-card {
-        padding: 2rem 2.25rem;
-      }
-    }
+        .copy p,
+        .copy li,
+        .copy blockquote {
+            max-width: 68ch;
+        }
 
-    /* Image styles */
-    .img-edge {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: var(--radius);
-      border: 1px solid var(--hair);
-      box-shadow: var(--shadow);
-      object-fit: cover;
-    }
+        /* Cards */
+        .card-soft {
+            background: var(--card);
+            border: 1px solid var(--hair);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
 
-    .equal-vh {
-      height: 360px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--hair);
-      box-shadow: var(--shadow);
-      display: block;
-    }
+        .copy-card {
+            padding: 1.75rem;
+        }
 
-    @media (min-width: 992px) {
-      .equal-vh {
-        height: 420px;
-      }
-    }
+        @media (min-width: 992px) {
+            .copy-card {
+                padding: 2rem 2.25rem;
+            }
+        }
 
-    /* Uniform benefit images (Mobility / Pain Relief / Balance) */
-    .benefit-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid var(--hair);
-      box-shadow: var(--shadow);
-      display: block;
-      margin-top: 1rem;
-    }
+        /* Image styles */
+        .img-edge {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius);
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
 
-    /* Pills + lists */
-    .pill {
-      font-family: 'Poppins', sans-serif;
-      font-size: .85rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: .45rem .85rem;
-      border-radius: 999px;
-      border: 1px solid var(--hair);
-      background: rgba(255, 255, 255, .7);
-      color: rgba(31, 42, 51, .76);
-    }
+        .equal-vh {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+            display: block;
+        }
 
-    .feature-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
+        @media (min-width: 992px) {
+            .equal-vh {
+                height: 420px;
+            }
+        }
 
-    .feature-list li {
-      display: flex;
-      gap: .75rem;
-      align-items: flex-start;
-      margin: .85rem 0;
-      color: var(--muted);
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-    }
+        /* Uniform benefit images (Mobility / Pain Relief / Balance) */
+        .benefit-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid var(--hair);
+            box-shadow: var(--shadow);
+            display: block;
+            margin-top: 1rem;
+        }
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin-top: .45rem;
-      background: rgba(31, 42, 51, .25);
-      flex: 0 0 10px;
-    }
+        /* Pills + lists */
+        .pill {
+            font-family: 'Poppins', sans-serif;
+            font-size: .85rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: .45rem .85rem;
+            border-radius: 999px;
+            border: 1px solid var(--hair);
+            background: rgba(255, 255, 255, .7);
+            color: rgba(31, 42, 51, .76);
+        }
 
-    /* Quote */
-    .quote {
-      border-left: 4px solid rgba(31, 42, 51, .18);
-      padding-left: 1rem;
-      margin: 1.25rem 0 0;
-      color: rgba(31, 42, 51, .82);
-      font-style: italic;
-    }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-    .quote cite {
-      display: block;
-      margin-top: .5rem;
-      font-style: normal;
-      color: rgba(31, 42, 51, .65);
-      font-size: .95rem;
-    }
+        .feature-list li {
+            display: flex;
+            gap: .75rem;
+            align-items: flex-start;
+            margin: .85rem 0;
+            color: var(--muted);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
 
-    /* Mission: unified card with image that matches text height */
-    .mission-card {
-      overflow: hidden;
-    }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-top: .45rem;
+            background: rgba(31, 42, 51, .25);
+            flex: 0 0 10px;
+        }
 
-    .mission-card .row {
-      --bs-gutter-x: 0;
-      --bs-gutter-y: 0;
-    }
+        /* Quote */
+        .quote {
+            border-left: 4px solid rgba(31, 42, 51, .18);
+            padding-left: 1rem;
+            margin: 1.25rem 0 0;
+            color: rgba(31, 42, 51, .82);
+            font-style: italic;
+        }
 
-    .mission-media {
-      height: 100%;
-      min-height: 260px;
-    }
+        .quote cite {
+            display: block;
+            margin-top: .5rem;
+            font-style: normal;
+            color: rgba(31, 42, 51, .65);
+            font-size: .95rem;
+        }
 
-    @media (min-width: 992px) {
-      .mission-media {
-        min-height: unset;
-      }
-    }
+        /* Mission: unified card with image that matches text height */
+        .mission-card {
+            overflow: hidden;
+        }
 
-    .mission-media img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
+        .mission-card .row {
+            --bs-gutter-x: 0;
+            --bs-gutter-y: 0;
+        }
 
-    /* Acuity iframe */
-    .scheduler-embed {
-      width: 100%;
-      min-height: 820px;
-      border: 0;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--hair);
-      background: rgba(255, 255, 255, .65);
-    }
+        .mission-media {
+            height: 100%;
+            min-height: 260px;
+        }
 
-    /* Navbar */
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: .5px;
-    }
+        @media (min-width: 992px) {
+            .mission-media {
+                min-height: unset;
+            }
+        }
 
-    /* Light scroll fade (optional) */
-    .scroll-fade {
-      opacity: 1;
-    }
-  </style>
+        .mission-media img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Acuity iframe */
+        .scheduler-embed {
+            width: 100%;
+            min-height: 820px;
+            border: 0;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--hair);
+            background: rgba(255, 255, 255, .65);
+        }
+
+        /* Navbar */
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        /* Light scroll fade (optional) */
+        .scroll-fade {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-md bg-white sticky-top border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tarasana</a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-md bg-white sticky-top border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tarasana</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav mb-2 mb-md-0">
-          <li class="nav-item"><a class="nav-link" href="yoga/">Yoga</a></li>
-          <li class="nav-item"><a class="nav-link" href="vibroacoustic/">Vibroacoustic</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
-          <li class="nav-item"><a class="nav-link" href="#who">Meet Tara</a></li>
-          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="content-wrap scroll-fade text-center" style="padding:4.75rem 0 2.25rem;">
-      <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager"
-        style="max-width:340px;width:65%;height:auto;" />
-      <p class="hero-tagline mt-3" style="max-width:70ch;margin:0 auto;color:rgba(31,42,51,.82);font-weight:500;">
-        Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
-      </p>
-
-      <div class="row g-3 mt-4 text-start">
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1" loading="lazy">
-        </div>
-        <div class="col-12 col-md-6">
-          <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Yoga / wellness image 2" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- Script headings + bands -->
-    <section class="pt-4 pb-0">
-      <div class="content-wrap">
-        <h1 class="script-heading scroll-fade">Live your life</h1>
-      </div>
-    </section>
-
-    <section class="pt-3">
-      <div class="content-wrap scroll-fade">
-        <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
-      </div>
-    </section>
-
-    <section class="pt-2 pb-0">
-      <div class="content-wrap">
-        <h2 class="script-heading scroll-fade">On Your Terms</h2>
-      </div>
-    </section>
-
-    <section class="pt-3">
-      <div class="content-wrap scroll-fade">
-        <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
-      </div>
-    </section>
-
-    <!-- YOGA INTRO -->
-    <section id="vibro">
-      <div class="content-wrap">
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
-          <h2 class="section-title mb-0">Yoga</h2>
-          <span class="pill">Gentle physical healing</span>
-        </div>
-    
-
-    <!-- Mobility / Pain Relief / Balance -->
-      <div class="content-wrap">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Mobility</h3>
-              <p class="mb-0">Grow quiet strength while building range of motion for improved real-life movement, .</p>
-              <img class="benefit-img" src="assets/img/mobility.jpg" alt="Mobility image" loading="lazy">
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="yoga/">Yoga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vibroacoustic/">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#who">Meet Tara</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-          </div>
-
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Pain relief</h3>
-              <p class="mb-0">Soften stiffness and unwind tension through mindful breathing and alignment.</p>
-              <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image" loading="lazy">
-            </div>
-          </div>
-
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100">
-              <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Balance</h3>
-              <p class="mb-0">Find steadiness — physically, mentally, and emotionally — on and off the mat.</p>
-              <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance image" loading="lazy">
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </nav>
 
-    <!-- VIBROACOUSTIC (Home teaser only: 3 cards) -->
-    <section id="vibro">
-      <div class="content-wrap">
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
-          <h2 class="section-title mb-0">Vibroacoustic Therapy</h2>
-          <span class="pill">Touchless meditative massage</span>
-        </div>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="content-wrap scroll-fade text-center" style="padding:4.75rem 0 2.25rem;">
+            <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager"
+                style="max-width:340px;width:65%;height:auto;" />
+            <p class="hero-tagline mt-3" style="max-width:70ch;margin:0 auto;color:rgba(31,42,51,.82);font-weight:500;">
+                Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
+            </p>
 
-        <div class="row g-4">
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100 p-4">
-              <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">What it is</h3>
-              <p class="mb-0">
-                Vibroacoustic Therapy (VAT) combines low-frequency sound vibrations with therapeutic music. You recline on a
-                vibroacoustic bed with embedded tactile transducers while using headphones — creating a calming, whole-body experience.
-              </p>
+            <div class="row g-3 mt-4 text-start">
+                <div class="col-12 col-md-6">
+                    <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1"
+                        loading="lazy">
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Yoga / wellness image 2"
+                        loading="lazy">
+                </div>
             </div>
-          </div>
-
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100 p-4">
-              <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">Benefits &amp; support areas</h3>
-              <ul class="feature-list mt-0">
-                <li><span class="dot"></span><span>Stress &amp; anxiety support</span></li>
-                <li><span class="dot"></span><span>Pain &amp; discomfort support</span></li>
-                <li><span class="dot"></span><span>Muscle tension &amp; spasticity support</span></li>
-                <li><span class="dot"></span><span>Sleep disturbances support</span></li>
-                <li><span class="dot"></span><span>Mood &amp; emotional well-being</span></li>
-                <li><span class="dot"></span><span>Mental clarity &amp; focus</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-12 col-lg-4 scroll-fade">
-            <div class="card-soft copy-card copy h-100 p-4">
-              <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">What to expect</h3>
-              <ul class="feature-list mt-0">
-                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span></li>
-                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones + optional eye mask)</span></li>
-                <li><span class="dot"></span><span>Frequencies selected based on your needs</span></li>
-                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span></li>
-                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your goals</span></li>
-              </ul>
-            </div>
-          </div>
         </div>
+    </header>
 
-        <div class="text-center mt-4">
-          <a class="btn btn-outline-dark px-4" href="vibroacoustic/">Explore Vibroacoustic Therapy</a>
-        </div>
-      </div>
-    </section>
+    <main>
 
-    <!-- MISSION (fixed: heading stays, image matches card height) -->
-    <section id="mission">
-      <div class="content-wrap">
-        <h2 class="section-title scroll-fade">Our Mission</h2>
+        <!-- Script headings + bands -->
+        <section class="pt-4 pb-0">
+            <div class="content-wrap">
+                <h1 class="script-heading scroll-fade">Live your life</h1>
+            </div>
+        </section>
 
-        <div class="card-soft mission-card scroll-fade">
-          <div class="row g-0 align-items-stretch">
-            <!-- Text -->
-            <div class="col-12 col-lg-7">
-              <div class="copy-card copy">
-                <p class="mb-3">
-                  Our intention is to offer simple, mindful tools that create meaningful shifts in how we move, breathe,
-                  and live through gentle, accessible yoga and heart-centered guidance.
+        <section class="pt-3">
+            <div class="content-wrap scroll-fade">
+                <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
+            </div>
+        </section>
+
+        <section class="pt-2 pb-0">
+            <div class="content-wrap">
+                <h2 class="script-heading scroll-fade">On Your Terms</h2>
+            </div>
+        </section>
+
+        <section class="pt-3">
+            <div class="content-wrap scroll-fade">
+                <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
+            </div>
+        </section>
+
+        <!-- YOGA INTRO -->
+        <section id="vibro">
+            <div class="content-wrap">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
+                    <h2 class="section-title mb-0">Yoga</h2>
+                    <span class="pill">Gentle physical healing</span>
+                </div>
+
+
+                <!-- Mobility / Pain Relief / Balance -->
+                <div class="content-wrap">
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-12 col-lg-4 scroll-fade">
+                            <div class="card-soft copy-card copy h-100">
+                                <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Mobility</h3>
+                                <p class="mb-0">Grow quiet strength while building range of motion for improved
+                                    real-life movement, .</p>
+                                <img class="benefit-img" src="assets/img/mobility.jpg" alt="Mobility image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 scroll-fade">
+                            <div class="card-soft copy-card copy h-100">
+                                <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Pain relief</h3>
+                                <p class="mb-0">Soften stiffness and unwind tension through mindful breathing and
+                                    alignment.</p>
+                                <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 scroll-fade">
+                            <div class="card-soft copy-card copy h-100">
+                                <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Balance</h3>
+                                <p class="mb-0">Find steadiness — physically, mentally, and emotionally — on and off the
+                                    mat.</p>
+                                <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- VIBROACOUSTIC (Home teaser only: 3 cards) -->
+        <section id="vibro">
+            <div class="content-wrap">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
+                    <h2 class="section-title mb-0">Vibroacoustic Therapy</h2>
+                    <span class="pill">Touchless meditative massage</span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100 p-4">
+                            <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">What it is</h3>
+                            <p class="mb-0">
+                                Vibroacoustic Therapy (VAT) combines low-frequency sound vibrations with therapeutic
+                                music. You recline on a
+                                vibroacoustic bed with embedded tactile transducers while using headphones — creating a
+                                calming, whole-body experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100 p-4">
+                            <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">Benefits &amp; support areas
+                            </h3>
+                            <ul class="feature-list mt-0">
+                                <li><span class="dot"></span><span>Stress &amp; anxiety support</span></li>
+                                <li><span class="dot"></span><span>Pain &amp; discomfort support</span></li>
+                                <li><span class="dot"></span><span>Muscle tension &amp; spasticity support</span></li>
+                                <li><span class="dot"></span><span>Sleep disturbances support</span></li>
+                                <li><span class="dot"></span><span>Mood &amp; emotional well-being</span></li>
+                                <li><span class="dot"></span><span>Mental clarity &amp; focus</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <div class="card-soft copy-card copy h-100 p-4">
+                            <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">What to expect</h3>
+                            <ul class="feature-list mt-0">
+                                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span>
+                                </li>
+                                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones +
+                                        optional eye mask)</span></li>
+                                <li><span class="dot"></span><span>Frequencies selected based on your needs</span></li>
+                                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span>
+                                </li>
+                                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your
+                                        goals</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a class="btn btn-outline-dark px-4" href="vibroacoustic/">Explore Vibroacoustic Therapy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION (fixed: heading stays, image matches card height) -->
+        <section id="mission">
+            <div class="content-wrap">
+                <h2 class="section-title scroll-fade">Our Mission</h2>
+
+                <div class="card-soft mission-card scroll-fade">
+                    <div class="row g-0 align-items-stretch">
+                        <!-- Text -->
+                        <div class="col-12 col-lg-7">
+                            <div class="copy-card copy">
+                                <p class="mb-3">
+                                    Our intention is to offer simple, mindful tools that create meaningful shifts in how
+                                    we move, breathe,
+                                    and live through gentle, accessible yoga and heart-centered guidance.
+                                </p>
+                                <p class="mb-0">
+                                    We support others in reconnecting with themselves — finding calm in the everyday,
+                                    strength in softness,
+                                    and balance both on and off the mat. We meet you where <strong>you</strong> are,
+                                    honoring your body, your breath,
+                                    and your journey. Every breath, every pose, and every moment of awareness is an
+                                    invitation to return home to peace.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="col-12 col-lg-5">
+                            <div class="mission-media">
+                                <img src="assets/img/mission.jpg" alt="Tarasana — mindful movement" loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEET TARA -->
+        <section id="who">
+            <div class="content-wrap">
+                <div class="card-soft copy-card copy scroll-fade">
+                    <h2 class="section-title mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Meet Tara</h2>
+
+                    <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
+                        Tara Copp is the founder of Tarasana Yoga and a certified yoga instructor specializing in
+                        gentle, restorative,
+                        and accessible practices.
+                    </p>
+
+                    <p>
+                        After spending over thirty years in the service industry, Tara knows firsthand how hard constant
+                        movement and long hours can be on the body and mind.
+                        Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
+                        slow down, listen inward, and rebuild balance from the inside out.
+                    </p>
+
+                    <p class="mb-0">
+                        Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
+                        she’s learned:
+                        caring for your body is not a luxury, but an essential act of growth. Her classes offer a calm
+                        space to breathe, soften,
+                        and reconnect — one mindful moment at a time.
+                    </p>
+
+                    <blockquote class="quote">
+                        “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a steady
+                        vibration.
+                        These are the moments that help us return home to peace.”
+                        <cite>— Tara Copp</cite>
+                    </blockquote>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE (bottom of page) -->
+        <section id="schedule">
+            <div class="content-wrap">
+                <h2 class="section-title scroll-fade">Schedule</h2>
+                <p class="copy scroll-fade" style="max-width:68ch;">
+                    Book a session using our scheduling calendar below.
                 </p>
-                <p class="mb-0">
-                  We support others in reconnecting with themselves — finding calm in the everyday, strength in softness,
-                  and balance both on and off the mat. We meet you where <strong>you</strong> are, honoring your body, your breath,
-                  and your journey. Every breath, every pose, and every moment of awareness is an invitation to return home to peace.
-                </p>
-              </div>
+
+                <div class="mt-3 scroll-fade">
+                    <iframe class="scheduler-embed" src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
+                        title="Acuity Scheduling"></iframe>
+                </div>
             </div>
+        </section>
 
-            <!-- Image -->
-            <div class="col-12 col-lg-5">
-              <div class="mission-media">
-                <img src="assets/img/mission.jpg" alt="Tarasana — mindful movement" loading="lazy" />
-              </div>
+        <!-- CONTACT (bottom of page) -->
+        <section id="contact" class="pt-0">
+            <div class="content-wrap">
+                <div class="card-soft copy-card copy scroll-fade">
+                    <h2 class="section-title mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Contact</h2>
+                    <ul class="feature-list">
+                        <li><span class="dot"></span><span><strong>Phone:</strong> (607) 226-4755</span></li>
+                        <li><span class="dot"></span><span><strong>Address:</strong> 1104 Union Center Maine Hwy,
+                                Endicott NY 13760</span></li>
+                        <li><span class="dot"></span><span><strong>Location:</strong> CareMore Health &amp;
+                                Wellness</span></li>
+                    </ul>
+
+                    <hr class="my-4" style="opacity:.12;">
+
+                    <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">Quick links</h3>
+                    <ul class="feature-list mt-0">
+                        <li><span class="dot"></span><span><a href="#schedule">Book a session</a></span></li>
+                        <li><span class="dot"></span><span><a href="yoga/">Yoga sessions</a></span></li>
+                        <li><span class="dot"></span><span><a href="vibroacoustic/">Vibroacoustic therapy</a></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- MEET TARA -->
-    <section id="who">
-      <div class="content-wrap">
-        <div class="card-soft copy-card copy scroll-fade">
-          <h2 class="section-title mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Meet Tara</h2>
+        <footer class="py-4">
+            <div class="content-wrap text-center">
+                <span class="copy">© <span id="year"></span> Tarasana</span>
+            </div>
+        </footer>
 
-          <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
-            Tara Copp is the founder of Tarasana Yoga and a certified yoga instructor specializing in gentle, restorative,
-            and accessible practices.
-          </p>
+    </main>
 
-          <p>
-            After spending over thirty years in the service industry, Tara knows firsthand how hard constant movement and long hours can be on the body and mind.
-            Her own journey through pain and fatigue led her to yoga — a practice that taught her how to slow down, listen inward, and rebuild balance from the inside out.
-          </p>
-
-          <p class="mb-0">
-            Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what she’s learned:
-            caring for your body is not a luxury, but an essential act of growth. Her classes offer a calm space to breathe, soften,
-            and reconnect — one mindful moment at a time.
-          </p>
-
-          <blockquote class="quote">
-            “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a steady vibration.
-            These are the moments that help us return home to peace.”
-            <cite>— Tara Copp</cite>
-          </blockquote>
-        </div>
-
-        <div class="row g-3 mt-4">
-          <div class="col-12 col-md-6 scroll-fade">
-            <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
-          </div>
-          <div class="col-12 col-md-6 scroll-fade">
-            <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCHEDULE (bottom of page) -->
-    <section id="schedule">
-      <div class="content-wrap">
-        <h2 class="section-title scroll-fade">Schedule</h2>
-        <p class="copy scroll-fade" style="max-width:68ch;">
-          Book a session using our scheduling calendar below.
-        </p>
-
-        <div class="mt-3 scroll-fade">
-          <iframe class="scheduler-embed"
-            src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
-            title="Acuity Scheduling"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (bottom of page) -->
-    <section id="contact" class="pt-0">
-      <div class="content-wrap">
-        <div class="card-soft copy-card copy scroll-fade">
-          <h2 class="section-title mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Contact</h2>
-          <ul class="feature-list">
-            <li><span class="dot"></span><span><strong>Phone:</strong> (607) 226-4755</span></li>
-            <li><span class="dot"></span><span><strong>Address:</strong> 1104 Union Center Maine Hwy, Endicott NY 13760</span></li>
-            <li><span class="dot"></span><span><strong>Location:</strong> CareMore Health &amp; Wellness</span></li>
-          </ul>
-
-          <hr class="my-4" style="opacity:.12;">
-
-          <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">Quick links</h3>
-          <ul class="feature-list mt-0">
-            <li><span class="dot"></span><span><a href="#schedule">Book a session</a></span></li>
-            <li><span class="dot"></span><span><a href="yoga/">Yoga sessions</a></span></li>
-            <li><span class="dot"></span><span><a href="vibroacoustic/">Vibroacoustic therapy</a></span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-4">
-      <div class="content-wrap text-center">
-        <span class="copy">© <span id="year"></span> Tarasana</span>
-      </div>
-    </footer>
-
-  </main>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -25,6 +25,37 @@
             --shadow: 0 16px 40px rgba(0, 0, 0, .06);
         }
 
+        /* Background mandala behind everything */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            background: #fff;
+            /* base background */
+        }
+
+        /* fixed “watermark” layer */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            /* behind all content */
+            pointer-events: none;
+            /* never interferes with clicks */
+            background-image: url("..assets/img/mandala.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min(900px, 85vmin);
+            opacity: 0.08;
+            /* subtle */
+            filter: blur(0px);
+            /* optional */
+        }
+
         body {
             font-family: 'Cinzel', serif;
             color: var(--ink);
@@ -158,9 +189,12 @@
                             </p>
                             <ul class="feature-list mt-0">
                                 <li><span class="dot"></span><span>Options for standing or seated movement</span></li>
-                                <li><span class="dot"></span><span>Joint-friendly pacing with clear, simple cues</span></li>
-                                <li><span class="dot"></span><span>Build strength, mobility, and confidence — without pushing</span></li>
-                                <li><span class="dot"></span><span>Breath-led movement + nervous-system calming</span></li>
+                                <li><span class="dot"></span><span>Joint-friendly pacing with clear, simple cues</span>
+                                </li>
+                                <li><span class="dot"></span><span>Build strength, mobility, and confidence — without
+                                        pushing</span></li>
+                                <li><span class="dot"></span><span>Breath-led movement + nervous-system calming</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -184,10 +218,13 @@
                                 props to meet you exactly where you are.
                             </p>
                             <ul class="feature-list mt-0">
-                                <li><span class="dot"></span><span>Longer holds + slow transitions for comfort and awareness</span></li>
-                                <li><span class="dot"></span><span>Props provided (blocks, straps, bolsters) for support</span></li>
+                                <li><span class="dot"></span><span>Longer holds + slow transitions for comfort and
+                                        awareness</span></li>
+                                <li><span class="dot"></span><span>Props provided (blocks, straps, bolsters) for
+                                        support</span></li>
                                 <li><span class="dot"></span><span>Modifications offered for every body</span></li>
-                                <li><span class="dot"></span><span>A calm space to breathe, soften, and reconnect</span></li>
+                                <li><span class="dot"></span><span>A calm space to breathe, soften, and reconnect</span>
+                                </li>
                             </ul>
                         </div>
                     </div>

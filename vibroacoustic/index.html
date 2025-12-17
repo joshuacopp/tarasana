@@ -25,6 +25,37 @@
             --shadow: 0 16px 40px rgba(0, 0, 0, .06);
         }
 
+        /* Background mandala behind everything */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            background: #fff;
+            /* base background */
+        }
+
+        /* fixed “watermark” layer */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            /* behind all content */
+            pointer-events: none;
+            /* never interferes with clicks */
+            background-image: url("..assets/img/mandala.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min(900px, 85vmin);
+            opacity: 0.08;
+            /* subtle */
+            filter: blur(0px);
+            /* optional */
+        }
+
         body {
             font-family: 'Cinzel', serif;
             color: var(--ink);
@@ -145,8 +176,10 @@
                 <div class="card-soft p-4 copy" style="max-width:90ch;">
                     <p class="mb-0">
                         Vibroacoustic Therapy (VAT) is a holistic wellness approach that combines low-frequency sound
-                        vibrations with specially composed therapeutic music. You recline on a vibroacoustic bed equipped
-                        with embedded tactile transducers while using headphones, creating a calming, whole-body experience.
+                        vibrations with specially composed therapeutic music. You recline on a vibroacoustic bed
+                        equipped
+                        with embedded tactile transducers while using headphones, creating a calming, whole-body
+                        experience.
                     </p>
                 </div>
             </div>
@@ -184,12 +217,16 @@
                         <div class="card-soft copy p-4 h-100">
                             <h2 class="h6 mb-2" style="font-weight:700;color:#1f2a33;">What to expect</h2>
                             <ul class="feature-list mt-0">
-                                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span></li>
-                                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones + optional
+                                <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span>
+                                </li>
+                                <li><span class="dot"></span><span>Recline on the vibroacoustic bed (headphones +
+                                        optional
                                         eye mask)</span></li>
                                 <li><span class="dot"></span><span>Frequencies selected based on your needs</span></li>
-                                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span></li>
-                                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your goals</span>
+                                <li><span class="dot"></span><span>Relax and let sound + vibration do the work</span>
+                                </li>
+                                <li><span class="dot"></span><span>Sessions last 15–60 minutes, based on your
+                                        goals</span>
                                 </li>
                             </ul>
                         </div>
@@ -206,7 +243,8 @@
                     <div class="col-12 col-lg-3">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">15 minutes</h3>
-                            <p class="mb-0">Quick stress relief, power naps, and an introduction for first-time users.</p>
+                            <p class="mb-0">Quick stress relief, power naps, and an introduction for first-time users.
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-3">
@@ -224,7 +262,8 @@
                     <div class="col-12 col-lg-3">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">60 minutes</h3>
-                            <p class="mb-0">Deepest experience with multiple frequencies for chronic concerns and profound
+                            <p class="mb-0">Deepest experience with multiple frequencies for chronic concerns and
+                                profound
                                 relaxation.</p>
                         </div>
                     </div>
@@ -240,14 +279,16 @@
                     <div class="col-12 col-lg-6">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">30–40 Hz (Gamma range)</h3>
-                            <p class="mb-0">Associated with cognitive function, attention, memory, and mental clarity. Often
+                            <p class="mb-0">Associated with cognitive function, attention, memory, and mental clarity.
+                                Often
                                 used for supporting focus and neurological wellness.</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">40–60 Hz</h3>
-                            <p class="mb-0">Often linked with energizing effects, improved alertness, and enhanced mood.</p>
+                            <p class="mb-0">Often linked with energizing effects, improved alertness, and enhanced mood.
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -260,14 +301,16 @@
                     <div class="col-12 col-lg-6">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">80–120 Hz</h3>
-                            <p class="mb-0">Associated with gentle stimulation, circulation support, and muscle relaxation —
+                            <p class="mb-0">Associated with gentle stimulation, circulation support, and muscle
+                                relaxation —
                                 often used as a complement to recovery.</p>
                         </div>
                     </div>
                 </div>
 
                 <p class="small copy mt-3" style="max-width:85ch;">
-                    Note: This is wellness support information, not medical advice. If you have health concerns or implanted
+                    Note: This is wellness support information, not medical advice. If you have health concerns or
+                    implanted
                     devices, please consult your medical provider.
                 </p>
             </div>
