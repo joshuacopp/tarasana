@@ -145,21 +145,18 @@
             border: 1px solid var(--hair);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-        }
 
-        /* Hover lift */
-        .card-hover {
             transition: transform .2s ease, box-shadow .2s ease;
             will-change: transform;
             position: relative;
-            z-index: 1;
         }
 
-        .card-hover:hover {
+        .card-soft:hover {
             transform: translateY(-6px);
             box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
             z-index: 5;
         }
+
 
 
         .copy-card {
@@ -543,48 +540,47 @@
         <section id="who">
             <div class="content-wrap">
                 <h2 class="section-title scroll-fade">Meet Tara</h2>
-                <section id="who">
-                    <div class="card-soft copy-card copy scroll-fade">
-                        <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
-                            Tara Copp is as certified yoga instructor, and the founder of Tarasana Yoga, specializing in
-                            gentle, restorative,
-                            and accessible practices.
-                        </p>
+                <div class="card-soft card-hover p-4 copy h-100">
+                    <p class="lead" style="color:rgba(31,42,51,.88);font-weight:500;">
+                        Tara Copp is as certified yoga instructor, and the founder of Tarasana Yoga, specializing in
+                        gentle, restorative,
+                        and accessible practices.
+                    </p>
 
-                        <p>
-                            After spending over thirty years in the service industry, Tara knows firsthand how hard
-                            constant
-                            movement and long hours can be on the body and mind.
-                            Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
-                            slow down, listen inward, and rebuild balance from the inside out.
-                        </p>
+                    <p>
+                        After spending over thirty years in the service industry, Tara knows firsthand how hard
+                        constant
+                        movement and long hours can be on the body and mind.
+                        Her own journey through pain and fatigue led her to yoga — a practice that taught her how to
+                        slow down, listen inward, and rebuild balance from the inside out.
+                    </p>
 
-                        <p class="mb-0">
-                            Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
-                            she’s learned:
-                            caring for your body is not a luxury, but an essential act of growth. Her classes offer a
-                            calm
-                            space to breathe, soften,
-                            and reconnect — one mindful moment at a time.
-                        </p>
+                    <p class="mb-0">
+                        Now, through her teachings with Tarasana at CareMore Health &amp; Wellness, she shares what
+                        she’s learned:
+                        caring for your body is not a luxury, but an essential act of growth. Her classes offer a
+                        calm
+                        space to breathe, soften,
+                        and reconnect — one mindful moment at a time.
+                    </p>
 
-                        <blockquote class="quote">
-                            “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a
-                            steady
-                            vibration.
-                            These are the moments that help us return home to peace.”
-                            <cite>— Tara Copp</cite>
-                        </blockquote>
+                    <blockquote class="quote">
+                        “I believe in the quiet power of simple practices — a slow breath, a gentle stretch, a
+                        steady
+                        vibration.
+                        These are the moments that help us return home to peace.”
+                        <cite>— Tara Copp</cite>
+                    </blockquote>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
                     </div>
-
-                    <div class="row g-3 mt-4">
-                        <div class="col-12 col-md-6 scroll-fade">
-                            <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
-                        </div>
-                        <div class="col-12 col-md-6 scroll-fade">
-                            <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
-                        </div>
+                    <div class="col-12 col-md-6 scroll-fade">
+                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
                     </div>
+                </div>
             </div>
         </section>
 

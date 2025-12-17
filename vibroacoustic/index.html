@@ -91,26 +91,24 @@
             border-bottom: 1px solid var(--hair);
         }
 
+        /* Cards */
         .card-soft {
             background: var(--card);
             border: 1px solid var(--hair);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-        }
 
-        /* Hover lift */
-        .card-hover {
             transition: transform .2s ease, box-shadow .2s ease;
             will-change: transform;
             position: relative;
-            z-index: 1;
         }
 
-        .card-hover:hover {
+        .card-soft:hover {
             transform: translateY(-6px);
             box-shadow: 0 18px 50px rgba(0, 0, 0, .12);
             z-index: 5;
         }
+
 
 
         .copy {
