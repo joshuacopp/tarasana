@@ -4,7 +4,101 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tarasana — Yoga</title>
+
+    <!-- SEO: Title & Description -->
+    <title>Yoga Classes in Endicott, NY | Chair Yoga & Gentle Flow | Tarasana</title>
+    <meta name="description" content="Gentle, accessible yoga classes in Endicott, NY. Chair yoga and slow flow sessions for all ages and fitness levels. Led by certified instructor Tara Copp at CareMore Health & Wellness." />
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="chair yoga Endicott NY, gentle yoga classes, slow flow yoga, accessible yoga, senior yoga, yoga for beginners, mobility yoga, Tara Copp, CareMore wellness" />
+
+    <!-- SEO: Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Gentle Yoga Classes in Endicott, NY | Tarasana" />
+    <meta property="og:description" content="Chair yoga and gentle slow flow classes for all ages and fitness levels. Accessible, supportive yoga in Endicott, NY." />
+    <meta property="og:image" content="https://tarasana.org/assets/img/logo.png" />
+    <meta property="og:url" content="https://tarasana.org/yoga/" />
+    <meta property="og:type" content="website" />
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gentle Yoga Classes in Endicott, NY | Tarasana" />
+    <meta name="twitter:description" content="Chair yoga and slow flow sessions for all bodies. Book your class today." />
+    <meta name="twitter:image" content="https://tarasana.org/assets/img/logo.png" />
+
+    <!-- SEO: Canonical URL -->
+    <link rel="canonical" href="https://tarasana.org/yoga/" />
+
+    <!-- SEO: Geographic -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="Endicott, New York" />
+    <meta name="geo.position" content="42.0979;-76.0493" />
+
+    <!-- SEO: Breadcrumb & Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Yoga Classes",
+      "name": "Tarasana Yoga Classes",
+      "description": "Gentle, accessible yoga classes including chair yoga and slow flow sessions for all ages and fitness levels.",
+      "provider": {
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Tarasana Yoga",
+        "url": "https://tarasana.org",
+        "telephone": "+16072264755",
+        "email": "tara@tarasana.org",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1104 Union Center Maine Hwy",
+          "addressLocality": "Endicott",
+          "addressRegion": "NY",
+          "postalCode": "13760",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Endicott",
+        "containedIn": {
+          "@type": "State",
+          "name": "New York"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Chair Yoga",
+          "description": "Supportive and accessible chair yoga for all ages, body types, and fitness levels"
+        },
+        {
+          "@type": "Offer",
+          "name": "Gentle Slow Flow",
+          "description": "Floor-based slow flow yoga with longer holds and mindful transitions"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tarasana.org"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Yoga",
+          "item": "https://tarasana.org/yoga/"
+        }
+      ]
+    }
+    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link
@@ -347,16 +441,16 @@
     </nav>
 
     <div class="page-logo-wrap">
-        <img src="../assets/img/logo.png" alt="Tarasana" class="page-logo" />
+        <img src="../assets/img/logo.png" alt="Tarasana Yoga - Gentle healing in Endicott, NY" class="page-logo" />
     </div>
 
 
-    <main>
+    <main role="main">
         <!-- HERO -->
-        <section class="pt-0">
+        <section class="pt-0" aria-labelledby="page-title">
             <div class="content-wrap" style="padding-top:3.5rem;">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                    <h1 class="mb-0">Yoga</h1>
+                    <h1 id="page-title" class="mb-0">Yoga</h1>
                     <span class="pill">Gentle physical healing</span>
                 </div>
 
@@ -389,26 +483,25 @@
                 </div>
             </div>
         </section>
-        <main>
-            <section class="pt-0">
-                <div class="content-wrap" style="padding-top:3.5rem;">
-                    <h1 class="mb-2">Yoga Sessions</h1>
+        <section class="pt-0" aria-labelledby="sessions-title">
+            <div class="content-wrap" style="padding-top:3.5rem;">
+                <h2 id="sessions-title" class="mb-2">Yoga Sessions</h2>
                     <p class="copy" style="max-width:85ch;">
 
                     </p>
                 </div>
             </section>
 
-            <section>
+            <section id="chair-yoga" aria-labelledby="chair-yoga-heading">
                 <div class="content-wrap">
                     <div class="split">
                         <div class="split-media">
-                            <img src="../assets/img/yoga_card_1.jpg" alt="Chair Yoga" loading="lazy">
+                            <img src="../assets/img/yoga_card_1.jpg" alt="Chair yoga class with supportive seated poses for all fitness levels" loading="lazy">
                         </div>
 
-                        <div class="card-soft split-card p-4 copy">
+                        <article class="card-soft split-card p-4 copy">
 
-                            <h2 class="mb-2">Chair Yoga</h2>
+                            <h3 id="chair-yoga-heading" class="mb-2">Chair Yoga</h3>
                             <p class="mb-3">
                                 Chair Yoga is supportive and accessible for all ages, body types, and fitness levels.
                                 It’s a great option if you’re easing
@@ -425,18 +518,18 @@
                                 <li><span class="dot"></span><span>Breath-led movement + nervous-system calming</span>
                                 </li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
 
 
-            <section>
+            <section id="slow-flow" aria-labelledby="slow-flow-heading">
                 <div class="content-wrap">
                     <div class="split">
-                        <div class="card-soft p-4 copy card-hover">
-                            <h2 class="mb-2">Gentle Slow Flow</h2>
+                        <article class="card-soft p-4 copy card-hover">
+                            <h3 id="slow-flow-heading" class="mb-2">Gentle Slow Flow</h3>
                             <p class="mb-3">
                                 Gentle Slow Flow is floor-based, slower paced, and designed to help you unwind tension
                                 and restore ease in the body.
@@ -453,10 +546,10 @@
                                 <li><span class="dot"></span><span>A calm space to breathe, soften, and reconnect</span>
                                 </li>
                             </ul>
-                        </div>
+                        </article>
 
                         <div class="split-media">
-                            <img src="../assets/img/yoga_card_2.jpg" alt="Gentle Slow Flow" loading="lazy">
+                            <img src="../assets/img/yoga_card_2.jpg" alt="Gentle slow flow yoga with floor poses and mindful transitions" loading="lazy">
                         </div>
                     </div>
                 </div>

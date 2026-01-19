@@ -4,7 +4,112 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tarasana — Vibroacoustic Therapy</title>
+
+    <!-- SEO: Title & Description -->
+    <title>Vibroacoustic Therapy in Endicott, NY | Sound Healing | Tarasana</title>
+    <meta name="description" content="Vibroacoustic therapy (VAT) in Endicott, NY. Touchless sound healing using low-frequency vibrations for stress relief, pain management, and deep relaxation. Book your session at CareMore Health & Wellness." />
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="vibroacoustic therapy Endicott NY, sound healing, VAT therapy, sound vibration therapy, stress relief Endicott, pain management therapy, relaxation therapy, CareMore wellness" />
+
+    <!-- SEO: Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Vibroacoustic Therapy in Endicott, NY | Tarasana" />
+    <meta property="og:description" content="Touchless sound healing therapy using gentle vibrations. Experience deep relaxation and wellness support in Endicott, NY." />
+    <meta property="og:image" content="https://tarasana.org/assets/img/logo.png" />
+    <meta property="og:url" content="https://tarasana.org/vibroacoustic/" />
+    <meta property="og:type" content="website" />
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vibroacoustic Therapy in Endicott, NY | Tarasana" />
+    <meta name="twitter:description" content="Sound healing therapy for stress relief, pain management, and deep relaxation. Book your VAT session today." />
+    <meta name="twitter:image" content="https://tarasana.org/assets/img/logo.png" />
+
+    <!-- SEO: Canonical URL -->
+    <link rel="canonical" href="https://tarasana.org/vibroacoustic/" />
+
+    <!-- SEO: Geographic -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="Endicott, New York" />
+    <meta name="geo.position" content="42.0979;-76.0493" />
+
+    <!-- SEO: Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Vibroacoustic Therapy",
+      "name": "Tarasana Vibroacoustic Therapy",
+      "alternateName": "VAT Therapy",
+      "description": "Vibroacoustic therapy combining low-frequency sound vibrations with therapeutic music for stress relief, pain management, and deep relaxation.",
+      "provider": {
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Tarasana Yoga",
+        "url": "https://tarasana.org",
+        "telephone": "+16072264755",
+        "email": "tara@tarasana.org",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1104 Union Center Maine Hwy",
+          "addressLocality": "Endicott",
+          "addressRegion": "NY",
+          "postalCode": "13760",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Endicott",
+        "containedIn": {
+          "@type": "State",
+          "name": "New York"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "15-Minute VAT Session",
+          "description": "Quick stress relief and introduction to vibroacoustic therapy"
+        },
+        {
+          "@type": "Offer",
+          "name": "30-Minute VAT Session",
+          "description": "Full therapeutic experience for relaxation and wellness maintenance"
+        },
+        {
+          "@type": "Offer",
+          "name": "45-Minute VAT Session",
+          "description": "Deeper meditation states and comprehensive stress reduction"
+        },
+        {
+          "@type": "Offer",
+          "name": "60-Minute VAT Session",
+          "description": "Deepest experience with multiple frequencies for chronic concerns"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tarasana.org"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vibroacoustic Therapy",
+          "item": "https://tarasana.org/vibroacoustic/"
+        }
+      ]
+    }
+    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link
@@ -247,16 +352,16 @@
     </nav>
 
     <div class="page-logo-wrap">
-        <img src="../assets/img/logo.png" alt="Tarasana" class="page-logo" />
+        <img src="../assets/img/logo.png" alt="Tarasana Vibroacoustic Therapy - Sound healing in Endicott, NY" class="page-logo" />
     </div>
 
 
-    <main>
+    <main role="main">
         <!-- HERO -->
-        <section class="pt-0">
+        <section class="pt-0" aria-labelledby="page-title">
             <div class="content-wrap" style="padding-top:3.5rem;">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                    <h1 class="mb-0">Vibroacoustic Therapy</h1>
+                    <h1 id="page-title" class="mb-0">Vibroacoustic Therapy</h1>
                     <span class="pill">Touchless meditative massage</span>
                 </div>
 
@@ -273,21 +378,21 @@
         </section>
 
         <!-- Summary cards (same as home) -->
-        <section>
+        <section aria-label="Vibroacoustic therapy overview">
             <div class="content-wrap">
                 <div class="row g-4">
                     <div class="col-12 col-lg-4">
-                        <div class="card-soft copy p-4 h-100">
+                        <article class="card-soft copy p-4 h-100">
                             <h2 class="h6 mb-2" style="font-weight:700;color:#1f2a33;">What it is</h2>
                             <p class="mb-0">
-                                VAT uses gentle vibrations (often in the 20–120 Hz range) transmitted through the body’s
+                                VAT uses gentle vibrations (often in the 20–120 Hz range) transmitted through the body's
                                 water-rich tissues to encourage relaxation, release tension, and restore balance.
                             </p>
-                        </div>
+                        </article>
                     </div>
 
                     <div class="col-12 col-lg-4">
-                        <div class="card-soft copy p-4 h-100">
+                        <article class="card-soft copy p-4 h-100">
                             <h2 class="h6 mb-2" style="font-weight:700;color:#1f2a33;">Benefits &amp; support areas</h2>
                             <ul class="feature-list mt-0">
                                 <li><span class="dot"></span><span>Stress &amp; anxiety support</span></li>
@@ -297,11 +402,11 @@
                                 <li><span class="dot"></span><span>Mood &amp; emotional well-being</span></li>
                                 <li><span class="dot"></span><span>Mental clarity &amp; focus</span></li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
 
                     <div class="col-12 col-lg-4">
-                        <div class="card-soft copy p-4 h-100">
+                        <article class="card-soft copy p-4 h-100">
                             <h2 class="h6 mb-2" style="font-weight:700;color:#1f2a33;">What to expect</h2>
                             <ul class="feature-list mt-0">
                                 <li><span class="dot"></span><span>Arrive in comfortable, loose-fitting clothing</span>
@@ -316,16 +421,16 @@
                                         goals</span>
                                 </li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Session lengths -->
-        <section>
+        <section id="sessions" aria-labelledby="sessions-heading">
             <div class="content-wrap">
-                <h2 class="mb-3">Session length options</h2>
+                <h2 id="sessions-heading" class="mb-3">Session length options</h2>
                 <div class="row g-4">
                     <div class="col-12 col-lg-3">
                         <div class="card-soft p-4 copy h-100">

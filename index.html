@@ -4,11 +4,125 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Tarasana — Home</title>
 
-    <!-- Favicons (put these files at repo root) -->
+    <!-- SEO: Title & Description -->
+    <title>Tarasana Yoga & Vibroacoustic Therapy | Endicott, NY | Gentle Healing & Wellness</title>
+    <meta name="description" content="Tarasana offers gentle yoga, restorative practices, and vibroacoustic therapy in Endicott, NY. Led by certified instructor Tara Copp. Book your session today for pain relief, mobility, and balance." />
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="yoga Endicott NY, gentle yoga, restorative yoga, vibroacoustic therapy, sound healing, wellness Endicott, pain relief yoga, mobility yoga, Tara Copp, CareMore Health Wellness" />
+
+    <!-- SEO: Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Tarasana Yoga & Vibroacoustic Therapy | Gentle Healing in Endicott, NY" />
+    <meta property="og:description" content="Gentle yoga and vibroacoustic therapy for mobility, pain relief, and balance. Located in Endicott, NY at CareMore Health & Wellness." />
+    <meta property="og:image" content="https://tarasana.org/assets/img/logo.png" />
+    <meta property="og:url" content="https://tarasana.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tarasana Yoga & Vibroacoustic Therapy | Endicott, NY" />
+    <meta name="twitter:description" content="Gentle, accessible yoga and sound healing therapy in Endicott, NY. Book your session today." />
+    <meta name="twitter:image" content="https://tarasana.org/assets/img/logo.png" />
+
+    <!-- SEO: Canonical URL -->
+    <link rel="canonical" href="https://tarasana.org" />
+
+    <!-- SEO: Author & Copyright -->
+    <meta name="author" content="Tara Copp, Tarasana Yoga" />
+    <meta name="copyright" content="Tarasana LLC" />
+
+    <!-- SEO: Geographic -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="Endicott, New York" />
+    <meta name="geo.position" content="42.0979;-76.0493" />
+    <meta name="ICBM" content="42.0979, -76.0493" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- SEO: Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Tarasana Yoga",
+      "alternateName": "Tarasana",
+      "description": "Gentle yoga, restorative practices, and vibroacoustic therapy in Endicott, NY. Accessible wellness for mobility, pain relief, and balance.",
+      "url": "https://tarasana.org",
+      "logo": "https://tarasana.org/assets/img/logo.png",
+      "image": [
+        "https://tarasana.org/assets/img/hero_left.jpg",
+        "https://tarasana.org/assets/img/hero_right.jpg"
+      ],
+      "telephone": "+16072264755",
+      "email": "tara@tarasana.org",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1104 Union Center Maine Hwy",
+        "addressLocality": "Endicott",
+        "addressRegion": "NY",
+        "postalCode": "13760",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "42.0979",
+        "longitude": "-76.0493"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Endicott",
+        "containedIn": {
+          "@type": "State",
+          "name": "New York"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Tara Copp",
+        "jobTitle": "Certified Yoga Instructor",
+        "description": "Certified yoga instructor specializing in gentle, restorative, and accessible practices."
+      },
+      "priceRange": "$$",
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=1104+Union+Center+Maine+Hwy,+Endicott+NY+13760",
+      "sameAs": [
+        "https://caremorehealthandwellness.com"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Wellness Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gentle Yoga Classes",
+              "description": "Accessible yoga for mobility, pain relief, and balance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Restorative Yoga",
+              "description": "Slow, mindful practice for stress relief and recovery"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vibroacoustic Therapy",
+              "description": "Touchless meditative massage using sound vibrations"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -404,39 +518,40 @@
     </nav>
 
     <!-- HERO -->
-    <header class="hero">
+    <header class="hero" role="banner">
         <div class="content-wrap scroll-fade text-center" style="padding:4.75rem 0 2.25rem;">
-            <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana logo" loading="eager"
+            <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana Yoga and Vibroacoustic Therapy - Gentle healing in Endicott, NY" loading="eager"
                 style="max-width:340px;width:65%;height:auto;" />
+            <h1 class="visually-hidden">Tarasana Yoga & Vibroacoustic Therapy - Endicott, NY</h1>
             <p class="hero-tagline mt-3" style="max-width:70ch;margin:0 auto;color:rgba(31,42,51,.82);font-weight:500;">
                 Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
             </p>
 
             <div class="row g-3 mt-4 text-start">
                 <div class="col-12 col-md-6">
-                    <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Yoga / wellness image 1"
+                    <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Gentle yoga practice session at Tarasana studio"
                         loading="lazy">
                 </div>
                 <div class="col-12 col-md-6">
-                    <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Yoga / wellness image 2"
+                    <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Restorative yoga and wellness at Tarasana"
                         loading="lazy">
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
+    <main role="main">
 
         <!-- Script headings + bands -->
-        <section class="pt-4 pb-0">
+        <section class="pt-4 pb-0" aria-label="Lifestyle inspiration">
             <div class="content-wrap">
-                <h1 class="script-heading scroll-fade">Live your life</h1>
+                <h2 class="script-heading scroll-fade">Live your life</h2>
             </div>
         </section>
 
         <section class="pt-3">
             <div class="content-wrap scroll-fade">
-                <img class="img-edge" src="assets/img/band_1.jpg" alt="Lifestyle / wellness band 1" loading="lazy">
+                <img class="img-edge" src="assets/img/band_1.jpg" alt="Mindful wellness and yoga lifestyle at Tarasana" loading="lazy">
             </div>
         </section>
 
@@ -448,15 +563,15 @@
 
         <section class="pt-3">
             <div class="content-wrap scroll-fade">
-                <img class="img-edge" src="assets/img/band_2.jpg" alt="Lifestyle / wellness band 2" loading="lazy">
+                <img class="img-edge" src="assets/img/band_2.jpg" alt="Personalized yoga and healing journey" loading="lazy">
             </div>
         </section>
 
         <!-- YOGA INTRO -->
-        <section id="vibro">
+        <section id="yoga" aria-labelledby="yoga-heading">
             <div class="content-wrap">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
-                    <h2 class="section-title mb-0">Yoga</h2>
+                    <h2 id="yoga-heading" class="section-title mb-0">Yoga</h2>
                     <span class="pill">Gentle physical healing</span>
                 </div>
 
@@ -465,33 +580,33 @@
                 <div class="content-wrap">
                     <div class="row g-4 align-items-stretch">
                         <div class="col-12 col-lg-4 scroll-fade">
-                            <div class="card-soft copy-card copy h-100">
+                            <article class="card-soft copy-card copy h-100">
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Mobility</h3>
                                 <p class="mb-0">Grow quiet strength while building range of motion for improved
                                     real-life movement.</p>
-                                <img class="benefit-img" src="assets/img/mobility.jpg" alt="Mobility image"
+                                <img class="benefit-img" src="assets/img/mobility.jpg" alt="Yoga poses for improved mobility and flexibility"
                                     loading="lazy">
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-lg-4 scroll-fade">
-                            <div class="card-soft copy-card copy h-100">
+                            <article class="card-soft copy-card copy h-100">
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Pain relief</h3>
                                 <p class="mb-0">Soften stiffness and unwind tension through mindful breathing and
                                     alignment.</p>
-                                <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Pain relief image"
+                                <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Gentle yoga for chronic pain relief and tension release"
                                     loading="lazy">
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-lg-4 scroll-fade">
-                            <div class="card-soft copy-card copy h-100">
+                            <article class="card-soft copy-card copy h-100">
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Balance</h3>
                                 <p class="mb-0">Find steadiness — physically, mentally, and emotionally — on and off the
                                     mat.</p>
-                                <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance image"
+                                <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance and stability through gentle yoga practice"
                                     loading="lazy">
-                            </div>
+                            </article>
                         </div>
                     </div>
 
@@ -502,10 +617,10 @@
         </section>
 
         <!-- VIBROACOUSTIC (Home teaser only: 3 cards) -->
-        <section id="vibro">
+        <section id="vibroacoustic" aria-labelledby="vibro-heading">
             <div class="content-wrap">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 scroll-fade">
-                    <h2 class="section-title mb-0">Vibroacoustic Therapy</h2>
+                    <h2 id="vibro-heading" class="section-title mb-0">Vibroacoustic Therapy</h2>
                     <span class="pill">Touchless meditative massage</span>
                 </div>
 
