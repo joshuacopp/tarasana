@@ -7,14 +7,14 @@
 
     <!-- SEO: Title & Description -->
     <title>Yoga Classes in Endicott, NY | Chair Yoga & Gentle Flow | Tarasana</title>
-    <meta name="description" content="Gentle, accessible yoga classes in Endicott, NY. Chair yoga and slow flow sessions for all ages and fitness levels. Led by certified instructor Tara Copp at CareMore Health & Wellness." />
+    <meta name="description" content="Gentle, accessible yoga classes in Endicott, NY. Chair yoga and Grounding Floor Flow classes for all ages and fitness levels. Led by certified instructor Tara Copp at CareMore Health & Wellness." />
 
     <!-- SEO: Keywords -->
-    <meta name="keywords" content="chair yoga Endicott NY, gentle yoga classes, slow flow yoga, accessible yoga, senior yoga, yoga for beginners, mobility yoga, Tara Copp, CareMore wellness" />
+    <meta name="keywords" content="chair yoga Endicott NY, gentle yoga classes, floor flow yoga, accessible yoga, senior yoga, yoga for beginners, mobility yoga, Tara Copp, CareMore wellness" />
 
     <!-- SEO: Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="Gentle Yoga Classes in Endicott, NY | Tarasana" />
-    <meta property="og:description" content="Chair yoga and gentle slow flow classes for all ages and fitness levels. Accessible, supportive yoga in Endicott, NY." />
+    <meta property="og:description" content="Chair yoga and Grounding Floor Flow classes for all ages and fitness levels. Accessible, supportive yoga in Endicott, NY." />
     <meta property="og:image" content="https://tarasana.org/assets/img/logo.png" />
     <meta property="og:url" content="https://tarasana.org/yoga/" />
     <meta property="og:type" content="website" />
@@ -22,7 +22,7 @@
     <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gentle Yoga Classes in Endicott, NY | Tarasana" />
-    <meta name="twitter:description" content="Chair yoga and slow flow sessions for all bodies. Book your class today." />
+    <meta name="twitter:description" content="Chair yoga and floor flow classes for all bodies. Book your class today." />
     <meta name="twitter:image" content="https://tarasana.org/assets/img/logo.png" />
 
     <!-- SEO: Canonical URL -->
@@ -40,7 +40,7 @@
       "@type": "Service",
       "serviceType": "Yoga Classes",
       "name": "Tarasana Yoga Classes",
-      "description": "Gentle, accessible yoga classes including chair yoga and slow flow sessions for all ages and fitness levels.",
+      "description": "Gentle, accessible yoga classes including chair yoga and Grounding Floor Flow classes for all ages and fitness levels.",
       "provider": {
         "@type": "HealthAndBeautyBusiness",
         "name": "Tarasana Yoga",
@@ -72,8 +72,8 @@
         },
         {
           "@type": "Offer",
-          "name": "Gentle Slow Flow",
-          "description": "Floor-based slow flow yoga with longer holds and mindful transitions"
+          "name": "Grounding Floor Flow",
+          "description": "Floor-based, slower-paced yoga with longer holds and mindful transitions"
         }
       ]
     }
@@ -111,7 +111,7 @@
           "name": "What types of yoga does Tarasana offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tarasana offers two types of yoga classes: Chair Yoga, which is performed seated in a chair and is ideal for seniors, beginners, or anyone with limited mobility; and Gentle Slow Flow, a floor-based practice with longer holds and mindful transitions suitable for all fitness levels."
+            "text": "Tarasana offers two types of yoga classes: Chair Yoga, which is performed seated in a chair and is ideal for seniors, beginners, or anyone with limited mobility; and Grounding Floor Flow, a floor-based practice with longer holds and mindful transitions suitable for all fitness levels."
           }
         },
         {
@@ -127,7 +127,7 @@
           "name": "What should I wear to yoga class?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wear comfortable, loose-fitting clothing that allows you to move freely. No special equipment is needed. For chair yoga, you will remain seated. For gentle slow flow, a yoga mat is provided."
+            "text": "Wear comfortable, loose-fitting clothing that allows you to move freely. No special equipment is needed. For chair yoga, you will remain seated. For Grounding Floor Flow, a yoga mat is provided."
           }
         },
         {
@@ -363,6 +363,41 @@
             }
         }
 
+        /* Weekly class times */
+        .class-times {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .class-times li {
+            display: grid;
+            grid-template-columns: 6.5rem 5.5rem 1fr;
+            gap: .5rem;
+            padding: .45rem 0;
+            border-bottom: 1px solid var(--hair);
+        }
+
+        .class-times li:last-child {
+            border-bottom: 0;
+        }
+
+        .class-times .day,
+        .class-times .time {
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        @media (max-width: 420px) {
+            .class-times li {
+                grid-template-columns: 5.5rem 1fr;
+            }
+
+            .class-times li > span:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+
         /* Sticky scheduler button */
         .sticky-book {
             position: fixed;
@@ -475,6 +510,7 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="./">Yoga</a></li>
                     <li class="nav-item"><a class="nav-link" href="../vibroacoustic/">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pricing/">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -516,23 +552,42 @@
                         <li><span class="dot"></span><span>Inner work - The purpose of the pose is to allow you
                                 to better your physically, mentally, and spiritually. This means reflecting inward
                                 to recognize and release your emotions, stresses, and old patterns.
-
-                                </form></span></li>
+                                </span></li>
                         <li><span class="dot"></span><span>Surrender - Trust the processs and allow the body to find
                                 it's own effortless expression within the shape.</span>
                         </li>
-
+                    </ul>
                 </div>
             </div>
         </section>
         <section class="pt-0" aria-labelledby="sessions-title">
             <div class="content-wrap" style="padding-top:3.5rem;">
-                <h2 id="sessions-title" class="mb-2">Yoga Sessions</h2>
-                    <p class="copy" style="max-width:85ch;">
-
-                    </p>
+                <h2 id="sessions-title" class="mb-3">Yoga Sessions</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <article class="card-soft p-4 copy h-100">
+                            <h3 class="h5 mb-2" style="color:#1f2a33;">Weekly classes</h3>
+                            <ul class="class-times">
+                                <li><span class="day">Thursday</span><span class="time">1:00 PM</span><span>30-min Chair Yoga</span></li>
+                                <li><span class="day">Thursday</span><span class="time">5:15 PM</span><span>30-min Grounding Floor Flow</span></li>
+                                <li><span class="day">Saturday</span><span class="time">9:00 AM</span><span>1-hour Grounding Floor Flow</span></li>
+                                <li><span class="day">Saturday</span><span class="time">1:00 PM</span><span>1-hour Chair Yoga</span></li>
+                            </ul>
+                            <p class="mb-0 mt-3">Private yoga is available Monday through Wednesday, by appointment.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <article class="card-soft p-4 copy h-100" style="border:2px solid rgba(96,64,138,.35);">
+                            <h3 class="h5 mb-1" style="color:#1f2a33;">The Tarasana Deep Restore &mdash; $60</h3>
+                            <p class="mb-2" style="font-style:italic;">Move. Melt. Integrate.</p>
+                            <p class="mb-3">30 minutes of gentle yoga or chair yoga, followed by 30 minutes on the
+                                vibroacoustic sound healing bed.</p>
+                            <a href="../pricing/">See all pricing &amp; the weekly schedule</a>
+                        </article>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <section id="chair-yoga" aria-labelledby="chair-yoga-heading">
                 <div class="content-wrap">
@@ -571,9 +626,9 @@
                 <div class="content-wrap">
                     <div class="split">
                         <article class="card-soft p-4 copy card-hover">
-                            <h3 id="slow-flow-heading" class="mb-2">Gentle Slow Flow</h3>
+                            <h3 id="slow-flow-heading" class="mb-2">Grounding Floor Flow</h3>
                             <p class="mb-3">
-                                Gentle Slow Flow is floor-based, slower paced, and designed to help you unwind tension
+                                Grounding Floor Flow is floor-based, slower paced, and designed to help you unwind tension
                                 and restore ease in the body.
                                 We use longer holds, mindful transitions, and supportive props to meet you exactly where
                                 you are.
@@ -591,7 +646,7 @@
                         </article>
 
                         <div class="split-media">
-                            <img src="../assets/img/yoga_card_2.jpg" alt="Gentle slow flow yoga with floor poses and mindful transitions" loading="lazy">
+                            <img src="../assets/img/yoga_card_2.jpg" alt="Grounding Floor Flow yoga with floor poses and mindful transitions" loading="lazy">
                         </div>
                     </div>
                 </div>

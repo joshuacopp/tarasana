@@ -133,7 +133,7 @@
           "name": "How long is a vibroacoustic therapy session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tarasana offers vibroacoustic therapy sessions in three lengths: 30 minutes (full therapeutic experience), 45 minutes (deeper meditation and stress reduction), and 60 minutes (deepest experience with multiple frequencies for chronic concerns)."
+            "text": "Tarasana offers vibroacoustic therapy sessions in three lengths: 30 minutes ($35, full therapeutic experience), 45 minutes ($55, deeper meditation and stress reduction), and 60 minutes ($75, deepest experience with multiple frequencies for chronic concerns). New clients can start with a 30-minute First-Time Reset for $30 or a 45-minute New Client Immersion for $45."
           }
         },
         {
@@ -308,6 +308,15 @@
             color: rgba(31, 42, 51, .70);
         }
 
+        .session-price {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 1.9rem;
+            line-height: 1.1;
+            color: rgb(96, 64, 138);
+            margin: .25rem 0 .5rem;
+        }
+
         /* Sticky scheduler button */
         .sticky-book {
             position: fixed;
@@ -381,6 +390,7 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../yoga/">Yoga</a></li>
                     <li class="nav-item"><a class="nav-link active" href="./">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pricing/">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -467,28 +477,41 @@
         <!-- Session lengths -->
         <section id="sessions" aria-labelledby="sessions-heading">
             <div class="content-wrap">
-                <h2 id="sessions-heading" class="mb-3">Session length options</h2>
+                <h2 id="sessions-heading" class="mb-3">Session lengths &amp; pricing</h2>
                 <div class="row g-4">
                     <div class="col-12 col-lg-4">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">30 minutes</h3>
+                            <p class="session-price">$35</p>
+                            <p class="mb-1" style="font-weight:700;">Gentle Nervous System Reset</p>
                             <p class="mb-0">A full therapeutic experience for relaxation and wellness maintenance.</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">45 minutes</h3>
+                            <p class="session-price">$55</p>
+                            <p class="mb-1" style="font-weight:700;">Full-Body Vibrational Immersion</p>
                             <p class="mb-0">Deeper meditation states and more comprehensive stress reduction.</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="card-soft p-4 copy h-100">
                             <h3 class="h6" style="font-weight:700;color:#1f2a33;">60 minutes</h3>
+                            <p class="session-price">$75</p>
+                            <p class="mb-1" style="font-weight:700;">Deep Therapeutic Integration</p>
                             <p class="mb-0">Deepest experience with multiple frequencies for chronic concerns and
                                 profound
                                 relaxation.</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="card-soft p-4 copy mt-4" style="border:2px solid rgba(96,64,138,.35);">
+                    <p class="mb-2"><strong>New here?</strong> First-Time Reset, 30 minutes &mdash; <strong>$30</strong>
+                        &nbsp;·&nbsp; New Client Immersion, 45 minutes &mdash; <strong>$45</strong></p>
+                    <p class="mb-0">Session packs of 3, 5, or 10 save up to $100.
+                        <a href="../pricing/">See all pricing, packs &amp; the weekly schedule</a></p>
                 </div>
             </div>
         </section>

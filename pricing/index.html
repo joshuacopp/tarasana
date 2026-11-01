@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO: Title & Description -->
+    <title>Pricing, Hours & Schedule | Vibroacoustic Therapy & Yoga | Tarasana, Endicott NY</title>
+    <meta name="description" content="Tarasana pricing and weekly schedule: vibroacoustic sound healing bed sessions from $35, first-time reset $30, the $60 Tarasana Deep Restore, session packs, Reiki, chair yoga and floor flow classes in Endicott, NY." />
+
+    <!-- SEO: Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Pricing, Hours & Schedule | Tarasana, Endicott NY" />
+    <meta property="og:description" content="Sound healing bed sessions from $35, introductory offers, session packs, Reiki, and weekly yoga classes at CareMore Health & Wellness." />
+    <meta property="og:image" content="https://tarasana.org/assets/img/logo.png" />
+    <meta property="og:url" content="https://tarasana.org/pricing/" />
+    <meta property="og:type" content="website" />
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pricing, Hours & Schedule | Tarasana" />
+    <meta name="twitter:description" content="Sound healing bed sessions from $35, session packs, Reiki, and weekly yoga classes in Endicott, NY." />
+    <meta name="twitter:image" content="https://tarasana.org/assets/img/logo.png" />
+
+    <!-- SEO: Canonical URL -->
+    <link rel="canonical" href="https://tarasana.org/pricing/" />
+
+    <!-- SEO: Geographic -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="Endicott, New York" />
+    <meta name="geo.position" content="42.0979;-76.0493" />
+
+    <!-- SEO: Business hours + priced offers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Tarasana Yoga",
+      "url": "https://tarasana.org",
+      "telephone": "+16072264755",
+      "email": "tara@tarasana.org",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1104 Union Center Maine Hwy",
+        "addressLocality": "Endicott",
+        "addressRegion": "NY",
+        "postalCode": "13760",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Wellness Offerings",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Vibroacoustic Sound Healing Bed, 30 minutes", "price": "35", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Vibroacoustic Sound Healing Bed, 45 minutes", "price": "55", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Vibroacoustic Sound Healing Bed, 60 minutes", "price": "75", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "First-Time Reset (30 minutes, new clients)", "price": "30", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "New Client Immersion (45 minutes, new clients)", "price": "45", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "The Tarasana Deep Restore (30 minutes yoga + 30 minutes sound bed)", "price": "60", "priceCurrency": "USD" }
+        ]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarasana.org" },
+        { "@type": "ListItem", "position": 2, "name": "Pricing & Schedule", "item": "https://tarasana.org/pricing/" }
+      ]
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@500;700&family=Kaivalya&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <style>
+        :root {
+            --ink: #1f2a33;
+            --muted: rgba(31, 42, 51, .78);
+            --hair: rgba(0, 0, 0, .08);
+            --card: #ffffff;
+            --bg: #ffffff;
+            --radius: 22px;
+            --shadow: 0 16px 40px rgba(0, 0, 0, .06);
+            --plum: rgb(96, 64, 138);
+            --plum-dark: rgb(80, 52, 116);
+            --plum-tint: rgba(96, 64, 138, .07);
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* fixed “watermark” layer, same as the other pages */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image: url("../assets/img/mandala.png?v=2");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min(900px, 85vmin);
+            opacity: 0.5;
+        }
+
+        body {
+            position: relative;
+            font-family: 'Cinzel', serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.7;
+        }
+
+        .content-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .navbar {
+            background: #fff;
+        }
+
+        section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid var(--hair);
+        }
+
+        .card-soft {
+            background: var(--card);
+            border: 1px solid var(--hair);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .copy {
+            font-family: 'Poppins', sans-serif;
+            color: var(--muted);
+        }
+
+        .page-logo-wrap {
+            display: flex;
+            justify-content: center;
+            margin: 2.5rem 0 1.75rem;
+        }
+
+        .page-logo {
+            max-width: 260px;
+            width: 60%;
+            height: auto;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: .45rem .9rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .75);
+            border: 1px solid rgba(0, 0, 0, .08);
+            white-space: nowrap;
+        }
+
+        .lede {
+            font-family: 'Poppins', sans-serif;
+            color: var(--muted);
+            max-width: 68ch;
+        }
+
+        /* Buttons */
+        .btn-book,
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            min-height: 48px;
+            padding: .7rem 1.4rem;
+            border-radius: 999px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .btn-book {
+            background: var(--plum);
+            color: #fff;
+        }
+
+        .btn-book:hover {
+            background: var(--plum-dark);
+            color: #fff;
+        }
+
+        .btn-ghost {
+            border: 2px solid var(--plum);
+            color: var(--plum);
+            background: #fff;
+        }
+
+        .btn-ghost:hover {
+            background: var(--plum-tint);
+            color: var(--plum-dark);
+        }
+
+        .btn-book:focus-visible,
+        .btn-ghost:focus-visible {
+            outline: 3px solid rgba(31, 42, 51, .35);
+            outline-offset: 3px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+
+        @media (max-width: 576px) {
+            .cta-row > a {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Price cards */
+        .price-card {
+            padding: 1.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: .25rem;
+        }
+
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            color: var(--plum);
+            margin: .5rem 0 .25rem;
+        }
+
+        .price small {
+            font-size: .95rem;
+            font-weight: 500;
+            color: var(--muted);
+        }
+
+        .tag {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: var(--plum);
+            background: var(--plum-tint);
+            border-radius: 999px;
+            padding: .2rem .65rem;
+            width: fit-content;
+        }
+
+        .signature {
+            border: 2px solid rgba(96, 64, 138, .35);
+            background: linear-gradient(180deg, #fff, rgba(96, 64, 138, .05));
+        }
+
+        .script {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 2vw + 1.2rem, 2.8rem);
+            line-height: 1.2;
+            color: var(--ink);
+        }
+
+        /* Package tables */
+        .pack-table {
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            color: var(--muted);
+            border-collapse: collapse;
+            margin: .5rem 0 0;
+        }
+
+        .pack-table th,
+        .pack-table td {
+            padding: .55rem .25rem;
+            border-bottom: 1px solid var(--hair);
+            text-align: left;
+        }
+
+        .pack-table thead th {
+            font-size: .8rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: rgba(31, 42, 51, .6);
+        }
+
+        .pack-table td.num,
+        .pack-table th.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pack-table td.save {
+            color: rgb(46, 110, 74);
+            font-weight: 700;
+        }
+
+        .pack-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        /* Hours + schedule */
+        .hours {
+            font-family: 'Poppins', sans-serif;
+            color: var(--ink);
+            margin: 0;
+        }
+
+        .hours div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 1rem;
+            padding: .55rem 0;
+            border-bottom: 1px solid var(--hair);
+        }
+
+        .hours div:last-child {
+            border-bottom: 0;
+        }
+
+        .hours dt {
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .hours dd {
+            margin: 0;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .day-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+
+        .day-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--muted);
+        }
+
+        .day-list li {
+            display: flex;
+            gap: .25rem;
+            padding: .3rem 0;
+        }
+
+        .day-list .time {
+            flex: 0 0 5.5rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .note {
+            font-family: 'Poppins', sans-serif;
+            font-size: .95rem;
+            color: rgba(31, 42, 51, .7);
+        }
+
+        footer {
+            padding: 2.5rem 0 3rem;
+            text-align: center;
+            color: rgba(31, 42, 51, .70);
+        }
+
+        /* Sticky scheduler button, same as the other pages */
+        .sticky-book {
+            position: fixed;
+            right: 1.25rem;
+            bottom: 1.25rem;
+            z-index: 1030;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .85rem 1.15rem;
+            border-radius: 999px;
+            background: rgba(96, 64, 138, .75);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: .01em;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, .12);
+            transition: transform .18s ease, box-shadow .18s ease, background .18s ease, opacity .18s ease, visibility .18s ease;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(6px);
+            pointer-events: none;
+        }
+
+        .sticky-book.sticky-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .sticky-book:hover {
+            background: rgba(80, 52, 116, .9);
+            color: #fff;
+        }
+
+        @media (max-width: 576px) {
+            .sticky-book {
+                right: .85rem;
+                left: .85rem;
+                bottom: .85rem;
+                justify-content: center;
+                padding: .95rem 1.15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md sticky-top border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html" style="font-weight:700;">
+                <img src="../assets/img/logo.png" alt="Tarasana logo" style="height:40px;width:auto;">
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../yoga/">Yoga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../vibroacoustic/">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-logo-wrap">
+        <img src="../assets/img/logo.png" alt="Tarasana Yoga - Gentle healing in Endicott, NY" class="page-logo"
+            width="708" height="900" />
+    </div>
+
+    <main role="main">
+        <!-- INTRO -->
+        <section class="pt-0" aria-labelledby="page-title">
+            <div class="content-wrap" style="padding-top:2rem;">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                    <h1 id="page-title" class="mb-0">Pricing &amp; Schedule</h1>
+                    <span class="pill">By appointment · Endicott, NY</span>
+                </div>
+                <p class="lede mb-4">
+                    Sound healing bed sessions, yoga, and Reiki at CareMore Health &amp; Wellness in Endicott.
+                    All sessions are by appointment.
+                </p>
+                <div class="cta-row">
+                    <a class="btn-book" href="#schedule">Book a session</a>
+                    <a class="btn-ghost" href="../assets/tarasana-wellness-flyer.pdf" download
+                        type="application/pdf">Download the flyer (PDF, 0.5 MB)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIBROACOUSTIC -->
+        <section id="vibroacoustic" aria-labelledby="vibro-heading">
+            <div class="content-wrap">
+                <h2 id="vibro-heading" class="mb-1">Vibroacoustic Sound Healing Bed</h2>
+                <p class="lede mb-4">
+                    Recline on the sound bed while low-frequency vibration and music do the work.
+                    <a href="../vibroacoustic/">How it works</a>
+                </p>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <article class="card-soft price-card">
+                            <h3>30 minutes</h3>
+                            <p class="price">$35</p>
+                            <p class="copy mb-0">Gentle Nervous System Reset</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card-soft price-card">
+                            <h3>45 minutes</h3>
+                            <p class="price">$55</p>
+                            <p class="copy mb-0">Full-Body Vibrational Immersion</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card-soft price-card">
+                            <h3>60 minutes</h3>
+                            <p class="price">$75</p>
+                            <p class="copy mb-0">Deep Therapeutic Integration</p>
+                        </article>
+                    </div>
+                </div>
+
+                <h3 class="mt-5 mb-3" style="font-size:1.35rem;font-weight:700;">Introductory offers</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <article class="card-soft price-card">
+                            <span class="tag">New clients</span>
+                            <h3 class="mt-2">First-Time Reset</h3>
+                            <p class="price">$30 <small>· 30 minutes</small></p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <article class="card-soft price-card">
+                            <span class="tag">New clients</span>
+                            <h3 class="mt-2">New Client Immersion</h3>
+                            <p class="price">$45 <small>· 45 minutes</small></p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section id="deep-restore" aria-labelledby="signature-heading">
+            <div class="content-wrap">
+                <article class="card-soft signature p-4 p-lg-5 text-center">
+                    <span class="tag">Signature experience</span>
+                    <h2 id="signature-heading" class="script mt-3 mb-1">The Tarasana Deep Restore</h2>
+                    <p class="copy mb-1">30 minutes of gentle yoga or chair yoga, followed by 30 minutes on the sound bed.</p>
+                    <p class="price">$60</p>
+                    <p class="copy mb-0" style="font-style:italic;">Move. Melt. Integrate.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PACKAGES -->
+        <section id="packages" aria-labelledby="packages-heading">
+            <div class="content-wrap">
+                <h2 id="packages-heading" class="mb-1">Session packs</h2>
+                <p class="lede mb-4">Save on sound bed sessions when you buy a pack.</p>
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4">
+                        <article class="card-soft price-card">
+                            <h3>30-Minute Reset Series</h3>
+                            <table class="pack-table">
+                                <thead>
+                                    <tr><th scope="col">Pack</th><th scope="col" class="num">Price</th><th scope="col" class="num">You save</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>3 sessions</td><td class="num">$90</td><td class="num save">$15</td></tr>
+                                    <tr><td>5 sessions</td><td class="num">$140</td><td class="num save">$35</td></tr>
+                                    <tr><td>10 sessions</td><td class="num">$250</td><td class="num save">$100</td></tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <article class="card-soft price-card">
+                            <h3>45-Minute Immersion Series</h3>
+                            <table class="pack-table">
+                                <thead>
+                                    <tr><th scope="col">Pack</th><th scope="col" class="num">Price</th><th scope="col" class="num">You save</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>3 sessions</td><td class="num">$150</td><td class="num save">$15</td></tr>
+                                    <tr><td>5 sessions</td><td class="num">$240</td><td class="num save">$35</td></tr>
+                                    <tr><td>10 sessions</td><td class="num">$450</td><td class="num save">$100</td></tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <article class="card-soft price-card">
+                            <h3>60-Minute Deep Restore Series</h3>
+                            <table class="pack-table">
+                                <thead>
+                                    <tr><th scope="col">Pack</th><th scope="col" class="num">Price</th><th scope="col" class="num">You save</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>3 sessions</td><td class="num">$210</td><td class="num save">$15</td></tr>
+                                    <tr><td>5 sessions</td><td class="num">$340</td><td class="num save">$35</td></tr>
+                                    <tr><td>10 sessions</td><td class="num">$650</td><td class="num save">$100</td></tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </div>
+                <p class="note mt-3 mb-0">Packs are for sound healing bed sessions. The 60-Minute Deep Restore Series is
+                    60-minute sound bed sessions, and is separate from the Tarasana Deep Restore yoga-and-sound
+                    experience above.</p>
+            </div>
+        </section>
+
+        <!-- REIKI + PRIVATE YOGA -->
+        <!-- DRAFT copy for Tara to review: the flyer lists Reiki and Private Yoga on the schedule but gives no
+             description or price for either. -->
+        <section id="reiki" aria-labelledby="reiki-heading">
+            <div class="content-wrap">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-6">
+                        <article class="card-soft price-card">
+                            <h2 id="reiki-heading" style="font-size:1.6rem;">Reiki</h2>
+                            <p class="copy">
+                                Reiki is a gentle, restful practice in which you lie fully clothed while light,
+                                non-manipulative touch, or hands held just above the body, guides you into a calm,
+                                deeply relaxed state. Many people find it a quiet way to let go of stress and settle
+                                the mind.
+                            </p>
+                            <p class="copy">
+                                Offered Monday through Wednesday, and around classes on Thursday and Saturday.
+                            </p>
+                            <p class="note mt-auto mb-0">Call or email for pricing.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="card-soft price-card">
+                            <h2 style="font-size:1.6rem;">Private Yoga</h2>
+                            <p class="copy">
+                                One-on-one gentle or chair yoga, shaped around your body, your pace, and your goals.
+                                <a href="../yoga/">About our yoga</a>
+                            </p>
+                            <p class="copy">Available Monday through Wednesday.</p>
+                            <p class="note mt-auto mb-0">Call or email for pricing.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOURS + WEEKLY SCHEDULE -->
+        <section id="hours" aria-labelledby="hours-heading">
+            <div class="content-wrap">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-5">
+                        <article class="card-soft price-card" style="height:auto;">
+                            <h2 id="hours-heading" style="font-size:1.6rem;">Wellness shop hours</h2>
+                            <dl class="hours">
+                                <div><dt>Monday – Thursday</dt><dd>9:00 AM – 5:00 PM</dd></div>
+                                <div><dt>Saturday</dt><dd>9:00 AM – 2:00 PM</dd></div>
+                                <div><dt>Friday &amp; Sunday</dt><dd>Closed</dd></div>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <h2 style="font-size:1.6rem;">Weekly schedule</h2>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <article class="card-soft price-card day-card">
+                                    <h3>Monday – Wednesday</h3>
+                                    <ul class="day-list">
+                                        <li>Private Yoga</li>
+                                        <li>Reiki</li>
+                                        <li>Vibroacoustic Sound Healing Bed</li>
+                                    </ul>
+                                    <p class="note mt-2 mb-0">By appointment during shop hours.</p>
+                                </article>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <article class="card-soft price-card day-card">
+                                    <h3>Thursday</h3>
+                                    <ul class="day-list">
+                                        <li><span class="time">1:00 PM</span> 30-min Chair Yoga</li>
+                                        <li><span class="time">5:15 PM</span> 30-min Grounding Floor Flow</li>
+                                    </ul>
+                                    <p class="note mt-2 mb-0">Reiki &amp; sound bed sessions available around yoga.</p>
+                                </article>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <article class="card-soft price-card day-card">
+                                    <h3>Saturday</h3>
+                                    <ul class="day-list">
+                                        <li><span class="time">9:00 AM</span> 1-hour Grounding Floor Flow</li>
+                                        <li><span class="time">1:00 PM</span> 1-hour Chair Yoga</li>
+                                    </ul>
+                                    <p class="note mt-2 mb-0">Reiki &amp; sound bed sessions available between yoga.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE / BOOKING -->
+        <section id="schedule" class="pb-0">
+            <div class="content-wrap">
+                <h2 class="mb-2">Book a session</h2>
+                <div class="copy" style="max-width:68ch;">
+                    <p class="mb-3">
+                        Book using the scheduler below.
+                        If it's tight on your phone, open booking in a new tab.
+                    </p>
+                    <a class="btn btn-outline-dark mb-3"
+                        href="https://app.acuityscheduling.com/schedule.php?owner=37818194" target="_blank"
+                        rel="noreferrer">
+                        Open booking in a new tab
+                    </a>
+                </div>
+                <div class="card-soft" style="overflow:hidden;">
+                    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=37818194"
+                        style="width:100%;height:950px;border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Acuity Scheduling">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="pt-5">
+            <div class="content-wrap">
+                <div class="card-soft p-4 copy">
+                    <h2 class="mb-3" style="font-size:clamp(1.8rem,1.4vw + 1rem,2.4rem);">Contact</h2>
+                    <ul class="day-list">
+                        <li><strong>Phone:</strong> <a href="tel:+16072264755">(607) 226-4755</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:tara@tarasana.org">tara@tarasana.org</a></li>
+                        <li><strong>Location:</strong> <a href="https://caremorehealthandwellness.com" target="_blank"
+                                rel="noopener">CareMore Health &amp; Wellness</a></li>
+                        <li><strong>Address:</strong>
+                            <a href="https://www.google.com/maps/search/?api=1&query=1104+Union+Center+Maine+Hwy,+Endicott+NY+13760"
+                                target="_blank" rel="noopener">1104 Union Center Maine Hwy, Endicott NY 13760</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="content-wrap">
+                <span class="copy">© <span id="year"></span> Tarasana LLC</span>
+            </div>
+        </footer>
+    </main>
+
+    <a class="sticky-book" href="#schedule" aria-label="Book a session on Acuity">
+        Book a session
+    </a>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        (function () {
+            const sticky = document.querySelector('.sticky-book');
+            if (!sticky) return;
+
+            const toggle = () => {
+                if (window.scrollY > 80) {
+                    sticky.classList.add('sticky-visible');
+                } else {
+                    sticky.classList.remove('sticky-visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggle, { passive: true });
+            window.addEventListener('load', toggle);
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

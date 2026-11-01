@@ -135,7 +135,7 @@
           "name": "What is Tarasana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tarasana is a yoga and vibroacoustic therapy studio in Endicott, NY, led by certified instructor Tara Copp. We offer gentle chair yoga, slow flow yoga, and vibroacoustic sound healing sessions at CareMore Health & Wellness, located at 1104 Union Center Maine Hwy."
+            "text": "Tarasana is a yoga and vibroacoustic therapy studio in Endicott, NY, led by certified instructor Tara Copp. We offer gentle chair yoga, Grounding Floor Flow yoga, Reiki, and vibroacoustic sound healing sessions at CareMore Health & Wellness, located at 1104 Union Center Maine Hwy."
           }
         },
         {
@@ -151,7 +151,7 @@
           "name": "What services does Tarasana offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tarasana offers three main services: Chair Yoga (seated, accessible yoga for all fitness levels), Gentle Slow Flow Yoga (floor-based yoga with longer holds and mindful transitions), and Vibroacoustic Therapy (touchless sound healing using low-frequency vibrations for stress relief, pain management, and deep relaxation). All sessions are by appointment."
+            "text": "Tarasana offers Chair Yoga (seated, accessible yoga for all fitness levels), Grounding Floor Flow (floor-based yoga with longer holds and mindful transitions), Vibroacoustic Therapy (touchless sound healing using low-frequency vibrations for stress relief, pain management, and deep relaxation), and Reiki. Sound healing bed sessions are $35 for 30 minutes, $55 for 45 minutes, and $75 for 60 minutes, with introductory offers for new clients; full pricing is at tarasana.org/pricing/. All sessions are by appointment."
           }
         },
         {
@@ -479,6 +479,24 @@
             font-family: 'Cinzel', serif;
         }
 
+        /* Pricing & hours summary */
+        .summary-label {
+            font-size: .85rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: rgba(31, 42, 51, .7);
+            margin-bottom: .15rem;
+        }
+
+        .summary-big {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.15;
+            color: rgb(96, 64, 138);
+            margin-bottom: .35rem;
+        }
+
         /* Hero call-to-action buttons */
         .hero-cta {
             display: flex;
@@ -607,6 +625,7 @@
                 <ul class="navbar-nav mb-2 mb-md-0">
                     <li class="nav-item"><a class="nav-link" href="yoga/">Yoga</a></li>
                     <li class="nav-item"><a class="nav-link" href="vibroacoustic/">Vibroacoustic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing/">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
                     <li class="nav-item"><a class="nav-link" href="#who">Meet Tara</a></li>
                     <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
@@ -718,6 +737,7 @@
                         <a class="btn btn-outline-dark px-4" href="yoga/">Explore Yoga Modalities</a>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- VIBROACOUSTIC (Home teaser only: 3 cards) -->
@@ -776,6 +796,37 @@
 
                 <div class="text-center mt-4">
                     <a class="btn btn-outline-dark px-4" href="vibroacoustic/">Explore Vibroacoustic Therapy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING & HOURS (summary; full detail on pricing/) -->
+        <section id="pricing" aria-labelledby="pricing-heading">
+            <div class="content-wrap">
+                <h2 id="pricing-heading" class="section-title">Pricing &amp; Hours</h2>
+                <div class="card-soft copy-card copy">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <p class="summary-label">Sound healing bed</p>
+                            <p class="summary-big">from $35</p>
+                            <p class="mb-0">30, 45 or 60 minutes. First visit $30.</p>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <p class="summary-label">Tarasana Deep Restore</p>
+                            <p class="summary-big">$60</p>
+                            <p class="mb-0">30 min yoga + 30 min sound bed.</p>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <p class="summary-label">Hours</p>
+                            <p class="mb-0" style="color:var(--ink);font-weight:500;">Mon–Thu 9 AM–5 PM<br>Sat 9 AM–2 PM</p>
+                            <p class="mb-0">Classes Thursday &amp; Saturday.</p>
+                        </div>
+                    </div>
+                    <div class="hero-cta" style="justify-content:flex-start;">
+                        <a class="btn-book" href="pricing/">See all pricing &amp; schedule</a>
+                        <a class="btn-call" href="assets/tarasana-wellness-flyer.pdf" download
+                            type="application/pdf">Download the flyer (PDF)</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -920,7 +971,8 @@
                     <h3 class="h6 brand mb-2" style="color:rgba(31,42,51,.92);">Quick links</h3>
                     <ul class="feature-list mt-0">
                         <li><span class="dot"></span><span><a href="#schedule">Book a session</a></span></li>
-                        <li><span class="dot"></span><span><a href="yoga/">Yoga sessions</a></span></li>
+                        <li><span class="dot"></span><span><a href="pricing/">Pricing &amp; weekly schedule</a></span></li>
+<li><span class="dot"></span><span><a href="yoga/">Yoga sessions</a></span></li>
                         <li><span class="dot"></span><span><a href="vibroacoustic/">Vibroacoustic therapy</a></span>
                         </li>
                     </ul>

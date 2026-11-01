@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://tarasana.org/</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,15 @@
   <!-- Yoga page -->
   <url>
     <loc>https://tarasana.org/yoga/</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pricing & schedule page -->
+  <url>
+    <loc>https://tarasana.org/pricing/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +28,7 @@
   <!-- Vibroacoustic therapy page -->
   <url>
     <loc>https://tarasana.org/vibroacoustic/</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
