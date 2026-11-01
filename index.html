@@ -207,7 +207,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: min(900px, 85vmin);
-            opacity: 0.5;
+            opacity: 0.1;
             /* subtle */
             filter: blur(0px);
             /* optional */
@@ -479,6 +479,63 @@
             font-family: 'Cinzel', serif;
         }
 
+        /* Hero call-to-action buttons */
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .75rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-book,
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: .75rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+        }
+
+        .btn-book {
+            background: rgb(96, 64, 138);
+            color: #fff;
+            box-shadow: 0 10px 28px rgba(96, 64, 138, .25);
+        }
+
+        .btn-book:hover {
+            background: rgb(80, 52, 116);
+            color: #fff;
+        }
+
+        .btn-call {
+            border: 2px solid rgb(96, 64, 138);
+            color: rgb(96, 64, 138);
+            background: #fff;
+        }
+
+        .btn-call:hover {
+            background: rgba(96, 64, 138, .08);
+            color: rgb(80, 52, 116);
+        }
+
+        .btn-book:focus-visible,
+        .btn-call:focus-visible {
+            outline: 3px solid rgba(31, 42, 51, .35);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 576px) {
+            .btn-book,
+            .btn-call {
+                flex: 1 1 100%;
+            }
+        }
+
         /* Sticky scheduler button */
         .sticky-book {
             position: fixed;
@@ -563,20 +620,25 @@
     <header class="hero" role="banner">
         <div class="content-wrap scroll-fade text-center" style="padding:4.75rem 0 2.25rem;">
             <img class="hero-logo" src="assets/img/logo.png" alt="Tarasana Yoga and Vibroacoustic Therapy - Gentle healing in Endicott, NY" loading="eager"
-                style="max-width:340px;width:65%;height:auto;" />
+                width="708" height="900" style="max-width:340px;width:65%;height:auto;" />
             <h1 class="visually-hidden">Tarasana Yoga & Vibroacoustic Therapy - Endicott, NY</h1>
             <p class="hero-tagline mt-3" style="max-width:70ch;margin:0 auto;color:rgba(31,42,51,.82);font-weight:500;">
                 Simple, mindful tools for meaningful shifts — in how we move, breathe, and live.
             </p>
 
+            <div class="hero-cta">
+                <a class="btn-book" href="#schedule">Book a session</a>
+                <a class="btn-call" href="tel:+16072264755">Call (607) 226-4755</a>
+            </div>
+
             <div class="row g-3 mt-4 text-start">
                 <div class="col-12 col-md-6">
                     <img class="equal-vh w-100" src="assets/img/hero_left.jpg" alt="Gentle yoga practice session at Tarasana studio"
-                        loading="lazy">
+                        width="1200" height="1200" loading="eager" fetchpriority="high">
                 </div>
                 <div class="col-12 col-md-6">
                     <img class="equal-vh w-100" src="assets/img/hero_right.jpg" alt="Restorative yoga and wellness at Tarasana"
-                        loading="lazy">
+                        width="1600" height="792" loading="eager">
                 </div>
             </div>
         </div>
@@ -593,7 +655,7 @@
 
         <section class="pt-3">
             <div class="content-wrap scroll-fade">
-                <img class="img-edge" src="assets/img/band_1.jpg" alt="Mindful wellness and yoga lifestyle at Tarasana" loading="lazy">
+                <img class="img-edge" src="assets/img/band_1.jpg" width="1284" height="855" alt="Mindful wellness and yoga lifestyle at Tarasana" loading="lazy">
             </div>
         </section>
 
@@ -605,7 +667,7 @@
 
         <section class="pt-3">
             <div class="content-wrap scroll-fade">
-                <img class="img-edge" src="assets/img/band_2.jpg" alt="Personalized yoga and healing journey" loading="lazy">
+                <img class="img-edge" src="assets/img/band_2.jpg" width="1284" height="856" alt="Personalized yoga and healing journey" loading="lazy">
             </div>
         </section>
 
@@ -626,7 +688,7 @@
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Mobility</h3>
                                 <p class="mb-0">Grow quiet strength while building range of motion for improved
                                     real-life movement.</p>
-                                <img class="benefit-img" src="assets/img/mobility.jpg" alt="Yoga poses for improved mobility and flexibility"
+                                <img class="benefit-img" src="assets/img/mobility.jpg" width="960" height="579" alt="Yoga poses for improved mobility and flexibility"
                                     loading="lazy">
                             </article>
                         </div>
@@ -636,7 +698,7 @@
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Pain relief</h3>
                                 <p class="mb-0">Soften stiffness and unwind tension through mindful breathing and
                                     alignment.</p>
-                                <img class="benefit-img" src="assets/img/pain_relief.jpg" alt="Gentle yoga for chronic pain relief and tension release"
+                                <img class="benefit-img" src="assets/img/pain_relief.jpg" width="1000" height="800" alt="Gentle yoga for chronic pain relief and tension release"
                                     loading="lazy">
                             </article>
                         </div>
@@ -646,7 +708,7 @@
                                 <h3 class="h6 brand mb-2 kaivalya" style="color:rgba(31,42,51,.92);">Balance</h3>
                                 <p class="mb-0">Find steadiness — physically, mentally, and emotionally — on and off the
                                     mat.</p>
-                                <img class="benefit-img" src="assets/img/balance.jpg" alt="Balance and stability through gentle yoga practice"
+                                <img class="benefit-img" src="assets/img/balance.jpg" width="1000" height="800" alt="Balance and stability through gentle yoga practice"
                                     loading="lazy">
                             </article>
                         </div>
@@ -748,7 +810,7 @@
                         <!-- Image -->
                         <div class="col-12 col-lg-5">
                             <div class="mission-media">
-                                <img src="assets/img/mission.jpg" alt="Tarasana — mindful movement" loading="lazy" />
+                                <img src="assets/img/mission.jpg" width="1000" height="1000" alt="Tarasana — mindful movement" loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -796,10 +858,10 @@
 
                 <div class="row g-3 mt-4">
                     <div class="col-12 col-md-6 scroll-fade">
-                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" alt="Tara photo 1" loading="lazy">
+                        <img class="equal-vh w-100" src="assets/img/tara_1.jpg" width="1050" height="1400" alt="Tara photo 1" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 scroll-fade">
-                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" alt="Tara photo 2" loading="lazy">
+                        <img class="equal-vh w-100" src="assets/img/tara_2.jpg" width="1170" height="936" alt="Tara photo 2" loading="lazy">
                     </div>
                 </div>
             </div>
