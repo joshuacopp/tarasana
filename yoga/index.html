@@ -363,6 +363,42 @@
             }
         }
 
+        /* Intro: text card beside Tara's portrait */
+        .intro-split {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        /* The text card sets the row height; the photo fills it, cropped,
+           instead of stretching the row to the portrait's full height */
+        .intro-photo {
+            position: relative;
+            min-height: 320px;
+        }
+
+        .intro-photo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        @media (max-width: 992px) {
+            .intro-split {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-photo {
+                height: 420px;
+            }
+        }
+
+        /* Floor flow photo: keep Tara (right of centre) in frame when cropped */
+        .floor-flow-photo {
+            object-position: 62% center;
+        }
+
         /* Weekly class times */
         .class-times {
             list-style: none;
@@ -532,7 +568,8 @@
                     <span class="pill">Gentle physical healing</span>
                 </div>
 
-                <div class="card-soft p-4 copy" style="max-width:90ch;">
+                <div class="split intro-split">
+                <div class="card-soft split-card p-4 copy">
                     <p class="mb-3">
                         Gentle, mindful, and accessible — designed to meet you where you’re at, with options for every
                         age,
@@ -557,6 +594,11 @@
                                 it's own effortless expression within the shape.</span>
                         </li>
                     </ul>
+                </div>
+                <div class="split-media intro-photo">
+                    <img src="../assets/img/tara_portrait.jpg" width="934" height="1400"
+                        alt="Tara Copp, founder and yoga instructor at Tarasana, smiling in the studio" loading="eager">
+                </div>
                 </div>
             </div>
         </section>
@@ -646,7 +688,8 @@
                         </article>
 
                         <div class="split-media">
-                            <img src="../assets/img/yoga_card_2.jpg" alt="Grounding Floor Flow yoga with floor poses and mindful transitions" loading="lazy">
+                            <img src="../assets/img/yoga_floor_flow.jpg" width="1600" height="1068" class="floor-flow-photo"
+                                alt="Tara leading a seated floor practice with a student in the wood-paneled Tarasana studio" loading="lazy">
                         </div>
                     </div>
                 </div>
