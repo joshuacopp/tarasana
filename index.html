@@ -426,6 +426,37 @@
             font-size: .95rem;
         }
 
+        /* Client reviews */
+        .review-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .review-stars {
+            color: #e0a100;
+            letter-spacing: .15em;
+            font-size: 1.05rem;
+            margin-bottom: .5rem;
+        }
+
+        .review-card blockquote {
+            margin: 0 0 1rem;
+            font-style: italic;
+        }
+
+        .review-card figcaption {
+            margin-top: auto;
+            font-weight: 600;
+            color: rgba(31, 42, 51, .90);
+        }
+
+        .review-card figcaption span {
+            display: block;
+            font-weight: 400;
+            font-size: .9rem;
+        }
+
         /* Mission: unified card with image that matches text height */
         .mission-card {
             overflow: hidden;
@@ -941,6 +972,50 @@
                         <img class="equal-vh w-100" src="assets/img/tara_2.jpg" width="1170" height="936" alt="Tara sitting on a porch, cheek to cheek with her Saint Bernard" loading="lazy">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS (excerpts of 5-star Google reviews) -->
+        <section id="reviews" aria-labelledby="reviews-heading">
+            <div class="content-wrap">
+                <h2 id="reviews-heading" class="section-title mb-4 scroll-fade">What Clients Say</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <figure class="card-soft copy review-card h-100 mb-0">
+                            <div class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote>
+                                &ldquo;As someone who&rsquo;s pretty new to yoga, I was honestly a little intimidated
+                                at first, but she creates such a welcoming and supportive environment&hellip; I have a
+                                back injury from years of floor nursing and she makes sure I am not in pain.&rdquo;
+                            </blockquote>
+                            <figcaption>Adrienne C.<span>Yoga &amp; vibroacoustic</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <figure class="card-soft copy review-card h-100 mb-0">
+                            <div class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote>
+                                &ldquo;I could literally feel tension melting away in layers, especially in areas I
+                                didn&rsquo;t even realize I was holding stress&hellip; By the end, I felt lighter,
+                                clearer, and more aligned&nbsp;&mdash; like my nervous system had been completely
+                                reset.&rdquo;
+                            </blockquote>
+                            <figcaption>Tami H.<span>Vibroacoustic therapy</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4 scroll-fade">
+                        <figure class="card-soft copy review-card h-100 mb-0">
+                            <div class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote>
+                                &ldquo;My hips and shoulders needed it. Highly recommend her class. Very easy going on
+                                your joints and she works with you if you&rsquo;re having difficulty with poses. Great
+                                at explaining what each pose does for your body as well.&rdquo;
+                            </blockquote>
+                            <figcaption>Toni Z.<span>Yoga class</span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p class="copy small mt-3 mb-0 text-center">Excerpts from 5-star Google reviews.</p>
             </div>
         </section>
 
