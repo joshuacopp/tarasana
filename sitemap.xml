@@ -25,6 +25,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Reiki page -->
+  <url>
+    <loc>https://tarasana.org/reiki/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Vibroacoustic therapy page -->
   <url>
     <loc>https://tarasana.org/vibroacoustic/</loc>
